@@ -1,6 +1,6 @@
-<h1 align="center">Hi 👋, I'm DevGun</h1>
+<h1 align="center">DevGun</h1>
 
-<h5 align="center">I'm a Security Research Engineer who strives to become an expert in development and security.</h5>
+<h3 align="center">I'm a Security Research Engineer who strives to become an expert in development and security.</h3>
 
 <div align="center"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fdevgunho&count_bg=%236BE3D4&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></div>
 
