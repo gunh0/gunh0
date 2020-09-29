@@ -14,5 +14,5 @@
 
 <br/>
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=devgunho&layout=compact&langs_count=8){:.alignleft}](https://github.com/anuraghazra/github-readme-stats)  [![solved.ac tier](http://mazassumnida.wtf/api/generate_badge?boj=pghufs2015){:.alignright}](#https://solved.ac/profile/pghufs2015)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=devgunho&layout=compact&langs_count=8)](https://github.com/anuraghazra/github-readme-stats)  [![solved.ac tier](http://mazassumnida.wtf/api/generate_badge?boj=pghufs2015)](#https://solved.ac/profile/pghufs2015)
 
