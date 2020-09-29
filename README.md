@@ -6,14 +6,13 @@
 
 <br/>
 
-- [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gunho-park-%EB%B0%95%EA%B1%B4%ED%98%B8-319a6b18b/)](https://www.linkedin.com/in/gunho-park-%EB%B0%95%EA%B1%B4%ED%98%B8-319a6b18b/)
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gunho-park-%EB%B0%95%EA%B1%B4%ED%98%B8-319a6b18b/)](https://www.linkedin.com/in/gunho-park-%EB%B0%95%EA%B1%B4%ED%98%B8-319a6b18b/) [![Facebook Badge](https://img.shields.io/badge/facebook-1877f2?style=flat-square&logo=facebook&logoColor=white&link=https://www.facebook.com/profile.php?id=100034064333066)](https://www.facebook.com/profile.php?id=100034064333066)
+
+<br/>
+
 - **[My Profile (Korean ver.)](https://devgunho.github.io)**
-- [![Facebook Badge](https://img.shields.io/badge/facebook-1877f2?style=flat-square&logo=facebook&logoColor=white&link=https://www.facebook.com/profile.php?id=100034064333066)](https://www.facebook.com/profile.php?id=100034064333066)
 
 <br/>
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=devgunho&layout=compact&langs_count=8)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=devgunho&layout=compact&langs_count=8){:.alignleft}](https://github.com/anuraghazra/github-readme-stats)  [![solved.ac tier](http://mazassumnida.wtf/api/generate_badge?boj=pghufs2015){:.alignright}](#https://solved.ac/profile/pghufs2015)
 
-<br/>
-
-[![solved.ac tier](http://mazassumnida.wtf/api/generate_badge?boj=pghufs2015)](#https://solved.ac/profile/pghufs2015)
