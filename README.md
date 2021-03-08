@@ -31,21 +31,15 @@
 
 <br/>
 
-
-    <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=devgunho&layout=compact&langs_count=8"/>
+<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=devgunho&layout=compact&langs_count=8"/>
 
 <br/>
 
-    
-<p align="center"><h2>
+<h2 align="center">
     Solved.ac
-</h2></p>
-<p align="center"><h3>
-    solved.ac is a community project that tags and challenges Baekjoon Online Judge problems.</h3></p>
+</h2>
+<h3 align="center">
+    solved.ac is a community project that tags and challenges Baekjoon Online Judge problems.</h3>
+
 <p align="center"><img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=pghufs2015"/></p>
-
-
-
-​    
-
 
