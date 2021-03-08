@@ -14,24 +14,27 @@
 <h2 align="center">
     WHO AM I
 </h2>
-<div style="text-align:center">
+<p align="center">
     <a href="https://www.linkedin.com/in/gunho-park-%EB%B0%95%EA%B1%B4%ED%98%B8-319a6b18b/">
     <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gunho-park-%EB%B0%95%EA%B1%B4%ED%98%B8-319a6b18b/"/>
         </a>
     <a href="https://facebook.com/devgunho">
 <img src="https://img.shields.io/badge/facebook-1877f2?style=flat-square&logo=facebook&logoColor=white&link=https://www.facebook.com/profile.php?id=100034064333066"/>
         </a>
-        <h3 align="center">
-            <a href="https://devgunho.github.io">
-            Korean Profile using Notion
-                </a>
-        </h3>        
+</p>
+<h3 align="center">
+        <a href="https://devgunho.github.io">
+        Korean Profile using Notion
+            </a>
+    </h3>            
 
 <br/>
 
 <br/>
 
-<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=devgunho&layout=compact&langs_count=8"/>
+<p align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=devgunho&layout=compact&langs_count=8"/></p>
+
+<br/>
 
 <br/>
 
