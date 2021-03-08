@@ -1,10 +1,11 @@
 <h1 align="center">DevGun (Gunho Park)</h1>
 
-<h5 align="center">I'm a Security Research Engineer who strives to become an expert in development and security.
+<h3 align="center">I'm a Security Research Engineer who strives to become an expert in development and security.
 </h3>
-<h5 align="center">
+<h3 align="center">
     Currently, I am a master's student in Korea University School of Cybersecurity.
 </h3>
+
 
 <div align="center"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fdevgunho&count_bg=%236BE3D4&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></div>
 
@@ -19,12 +20,12 @@
         </a>
     <a href="facebook.com/devgunho">
 <img src="https://img.shields.io/badge/facebook-1877f2?style=flat-square&logo=facebook&logoColor=white&link=https://www.facebook.com/profile.php?id=100034064333066"/>
-        <a href="https://devgunho.github.io">
-            <h5>
-                Korean Profile using Notion
-            </h5>
         </a>
-    </a>
+        <h5 align="center">
+            <a href="https://devgunho.github.io">
+            Korean Profile using Notion
+                </a>
+        </h5>        
 
 <br/>
 
@@ -40,9 +41,10 @@
     <h2>
         Solved.ac
     </h2>
-    <h5>
+    <h4>
         solved.ac is a community project that tags and challenges Baekjoon Online Judge problems.
-    </h5>
+    </h4>
     <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=pghufs2015"/>
 </div>
+
 
