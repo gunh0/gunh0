@@ -29,10 +29,11 @@
         Korean Profile using Notion
             </a>
     </h3>            
-
 <br/>
 
 <br/>
+
+<p align="center"><img src="https://github-readme-streak-stats.herokuapp.com/?user=devgunho&theme=graywhite"/></p>
 
 <p align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=devgunho&layout=compact&langs_count=8"/></p>
 
