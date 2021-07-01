@@ -1,9 +1,10 @@
 <h1 align="center">DevGun (Gunho Park)</h1>
 
-<h3 align="center">I'm a Security Research Engineer who strives to become an expert in development and security.
+<h3 align="center">
+    I strive to become an expert who has a tool called 'Development' and a blueprint called 'Cybersecurity', and can use both in harmony.
 </h3>
 <h3 align="center">
-    Currently, I am a master's student in Korea University School of Cybersecurity.
+    Currently, I am a master's student researcher in Korea University School of Cybersecurity.
 </h3>
 
 
