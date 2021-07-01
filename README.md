@@ -1,8 +1,8 @@
 <h1 align="center">DevGun (Gunho Park)</h1>
 
 <h3 align="center">
-    I strive to become an expert who has a tool called 'Development' <br/>
-    and a blueprint called 'Cybersecurity', and can use both in harmony.
+    I strive to become an Expert who has A Tool called 'Development' <br/>
+    A Blueprint called 'Cybersecurity', and can use both in harmony.
 </h3>
 <h3 align="center">
     Currently, I am a master's student researcher in Korea University School of Cybersecurity.
