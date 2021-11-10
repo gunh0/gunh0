@@ -3,11 +3,13 @@
 <h3 align="center">
     I strive to become an Expert who has<br/>
     A Tool called 'Development' & A Blueprint called 'Cybersecurity',<br/>
-    and can use both in harmony.
+    and can use both in harmony.<br/>
+    I'm focused on Data-driven Security.
 </h3>
 <h3 align="center">
     Currently, I am a master's student researcher in Korea University School of Cybersecurity.
 </h3>
+
 
 
 <div align="center"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fdevgunho&count_bg=%236BE3D4&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></div>
