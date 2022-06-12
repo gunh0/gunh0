@@ -1,6 +1,6 @@
 <h1 align="center">DevGun (Gunho Park)</h1>
 
-**Introduction (KOR) : https://devgunho.github.io/profile**
+**🇰🇷 Introduction: https://devgunho.github.io/profile**
 
 <h3 align="center">
     I strive to become an Expert who has<br/>
