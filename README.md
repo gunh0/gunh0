@@ -1,6 +1,6 @@
-<h1 align="center">DevGun (Gunho Park)</h1>
+<h1 align="center">gunh0 (Gunho Park)</h1>
 
-**🇰🇷 Introduction: https://devgunho.github.io/profile**
+**🇰🇷 Introduction: https://gunh0.github.io/profile**
 
 <h3 align="center">
     I strive to become an Expert who has<br/>
@@ -9,10 +9,13 @@
     I'm focused on Data-driven Security.
 </h3>
 <p align="center">
-    <a href="https://www.linkedin.com/in/gunho-park-%EB%B0%95%EA%B1%B4%ED%98%B8-319a6b18b/">
-    <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gunho-park-%EB%B0%95%EA%B1%B4%ED%98%B8-319a6b18b/"/></a>
-    <a href="https://facebook.com/devgunho">
-		<img src="https://img.shields.io/badge/facebook-1877f2?style=flat-square&logo=facebook&logoColor=white&link=https://www.facebook.com/profile.php?id=100034064333066"/></a>
+	<a href="https://www.linkedin.com/in/gunh0902/">
+	    <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gunho-park-%EB%B0%95%EA%B1%B4%ED%98%B8-319a6b18b/"/>
+	</a>
+	
+	<a href="https://www.facebook.com/gunh0902">
+	    <img src="https://img.shields.io/badge/facebook-1877f2?style=flat-square&logo=facebook&logoColor=white&link=https://www.facebook.com/profile.php?id=100034064333066"/>
+	</a>
 </p>
 
 
