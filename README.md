@@ -2,6 +2,8 @@
 
 **🇰🇷 Introduction: https://gunh0.github.io/profile**
 
+**[Curriculum Vitae (CV)](https://github.com/gunh0/curriculum-vitae/blob/master/main/cv.pdf)**
+
 <h3 align="center">
     I strive to become an Expert who has<br/>
     A Tool called 'Development' & A Blueprint called 'Cybersecurity',<br/>
