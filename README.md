@@ -1,15 +1,13 @@
 <h1 align="center">gunh0 (Gunho Park)</h1>
 
-**🇰🇷 Introduction: https://gunh0.github.io/profile**
+**🇰🇷 Introduction (Profile): https://gunh0.github.io/profile**
 
-**[Curriculum Vitae (CV)](https://github.com/gunh0/curriculum-vitae/blob/master/main/cv.pdf)**
+**[💼 Curriculum Vitae (CV)](https://github.com/gunh0/curriculum-vitae/blob/master/main/cv.pdf)**
 
-<h3 align="center">
-    I strive to become an Expert who has<br/>
-    A Tool called 'Development' & A Blueprint called 'Cybersecurity',<br/>
-    and can use both in harmony.<br/>
-    I'm focused on Data-driven Security.
-</h3>
+**I am committed to becoming an expert equipped with the powerful tool of 'Development' and the strategic blueprint of 'Cybersecurity,' seamlessly integrating both to create a robust defense against evolving threats. My primary focus lies in Data-driven Security, where insights derived from data guide decision-making processes to enhance the overall security posture.**
+
+**Furthermore, I am actively engaged in advancing my expertise in the realm of DevSecOps, with a specialized emphasis on securing environments within the Cloud and DevOps landscapes. Recognizing the dynamic nature of these domains, I am dedicated to staying at the forefront of technology trends and implementing security measures that align with the principles of continuous integration, continuous delivery, and collaboration.**
+
 <p align="center">
 	<a href="https://www.linkedin.com/in/gunh0902/">
 	    <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gunho-park-%EB%B0%95%EA%B1%B4%ED%98%B8-319a6b18b/"/>
@@ -40,8 +38,8 @@
 <h2 align="center">
     Solved.ac
 </h2>
-<h3 align="center">
-    solved.ac is a community project that tags and challenges Baekjoon Online Judge problems.</h3>
+
+### solved.ac is a community project that tags and challenges Baekjoon Online Judge problems.</h3>
 
 <p align="center"><img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=pghufs2015"/></p>
 
