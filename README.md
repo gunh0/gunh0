@@ -27,7 +27,7 @@
 
 <p align="center"><img src="https://github-profile-trophy.vercel.app/?username=gunh0&row=1&column=6&margin-w=15)"/></p>
 
-<p align="center"><img src="https://github-readme-streak-stats.herokuapp.com/?user=gunh0&theme=graywhite"/></p>
+<p align="center"><img src="https://streak-stats.demolab.com?user=gunh0&theme=transparent&hide_border=true&card_width=500&card_height=200" alt="GitHub Streak" /></p>
 
 [![Coders rank](https://cr-skills-chart-widget.azurewebsites.net/api/api?username=gunh0)](https://profile.codersrank.io/user/gunh0)
 
