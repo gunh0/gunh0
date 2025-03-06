@@ -17,17 +17,21 @@
  </a>
 </p>
 
-</p>
-
-<p align="center">
-<img src="https://streak-stats.demolab.com?user=gunh0&hide_border=true" alt="GitHub Streak" />
-</p>
-
-<br/>
+<div align="center">
+  <a href="https://github.com/gunh0/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=gunh0&row=2&column=4" alt="trophy" />
+  </a>
+</div>
 
 <br/>
 
-[![Coders rank](https://cr-skills-chart-widget.azurewebsites.net/api/api?username=gunh0)](https://profile.codersrank.io/user/gunh0)
+<br/>
+  
+<div align="center">
+  <a href="https://profile.codersrank.io/user/gunh0">
+    <img src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=gunh0" alt="Coders rank" />
+  </a>
+</div>
 
 <br/>
 
