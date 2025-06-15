@@ -23,14 +23,9 @@
   </a>
 </div>
 
-<br/>
-
-<br/>
-  
 <div align="center">
-  <a href="https://profile.codersrank.io/user/gunh0">
-    <img src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=gunh0" alt="Coders rank" />
-  </a>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=gunh0&show_icons=true&rank_icon=percentile" alt="gunh0's GitHub Stats"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=gunh0&layout=compact" alt="gunh0's Top Languages"/>
 </div>
 
 <br/>
