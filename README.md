@@ -8,13 +8,12 @@
 
 **Furthermore, I am actively engaged in advancing my expertise in the realm of DevSecOps, with a specialized emphasis on securing environments within the Cloud and DevOps landscapes. Recognizing the dynamic nature of these domains, I am dedicated to staying at the forefront of technology trends and implementing security measures that align with the principles of continuous integration, continuous delivery, and collaboration.**
 
+<br/>
+
 <p align="center">
- <a href="https://www.linkedin.com/in/gunh0902/">
-     <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gunho-park-%EB%B0%95%EA%B1%B4%ED%98%B8-319a6b18b/"/>
- </a>
- <a href="https://www.facebook.com/gunh0902">
-    <img src="https://img.shields.io/badge/facebook-1877f2?style=flat-square&logo=facebook&logoColor=white&link=https://www.facebook.com/profile.php?id=100034064333066"/>
- </a>
+  <a href="https://git.io/streak-stats">
+    <img src="https://streak-stats.demolab.com/?user=gunh0" alt="GitHub Streak"/>
+  </a>
 </p>
 
 <br/>
@@ -26,8 +25,6 @@
 **solved.ac is a community project that tags and challenges Baekjoon Online Judge problems.**
 
 <p align="center"><img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=pghufs2015"/></p>
-
-<br/>
 
 <br/>
 
