@@ -17,19 +17,6 @@
  </a>
 </p>
 
-<div align="center">
-  <a href="https://github.com/gunh0/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=gunh0&row=2&column=4" alt="trophy" />
-  </a>
-</div>
-
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=gunh0&show_icons=true&rank_icon=percentile" alt="gunh0's GitHub Stats"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=gunh0&layout=compact" alt="gunh0's Top Languages"/>
-</div>
-
-<br/>
-
 <br/>
 
 <h3 align="left">
