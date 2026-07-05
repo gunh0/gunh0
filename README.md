@@ -34,6 +34,9 @@
   <img src="./assets/featured-projects-stats.svg" alt="Featured Projects: 28 total — Security & DevSecOps 8, AI & LLM Engineering 3, Systems & Infrastructure 7, Foundations 1, Learning & Playgrounds 9"/>
 </p>
 
+<details open>
+<summary><b>🔐 Security & DevSecOps (8)</b></summary>
+<br/>
 <p align="center">
   <a href="https://github.com/gunh0/kr-vulhub"><img src="./assets/featured/kr-vulhub.svg" width="49%" alt="01 kr-vulhub"/></a>
   <a href="https://github.com/gunh0/whs-utils"><img src="./assets/featured/whs-utils.svg" width="49%" alt="02 whs-utils"/></a>
@@ -43,9 +46,23 @@
   <a href="https://github.com/gunh0/os-security-hub"><img src="./assets/featured/os-security-hub.svg" width="49%" alt="06 os-security-hub"/></a>
   <a href="https://github.com/gunh0/tor-network-analyzer"><img src="./assets/featured/tor-network-analyzer.svg" width="49%" alt="07 tor-network-analyzer"/></a>
   <a href="https://github.com/gunh0/malware-image-classification"><img src="./assets/featured/malware-image-classification.svg" width="49%" alt="08 malware-image-classification"/></a>
+</p>
+</details>
+
+<details open>
+<summary><b>🤖 AI & LLM Engineering (3)</b></summary>
+<br/>
+<p align="center">
   <a href="https://github.com/gunh0/kr-mcp-from-scratch"><img src="./assets/featured/kr-mcp-from-scratch.svg" width="49%" alt="09 kr-mcp-from-scratch"/></a>
   <a href="https://github.com/gunh0/llm-quota-monitor"><img src="./assets/featured/llm-quota-monitor.svg" width="49%" alt="10 llm-quota-monitor"/></a>
   <a href="https://github.com/gunh0/reinforcement-learning-q-learning-gymnasium"><img src="./assets/featured/reinforcement-learning-q-learning-gymnasium.svg" width="49%" alt="11 reinforcement-learning-q-learning-gymnasium"/></a>
+</p>
+</details>
+
+<details open>
+<summary><b>⚙️ Systems & Infrastructure (7)</b></summary>
+<br/>
+<p align="center">
   <a href="https://github.com/gunh0/pcap-tracking"><img src="./assets/featured/pcap-tracking.svg" width="49%" alt="12 pcap-tracking"/></a>
   <a href="https://github.com/gunh0/linux-system-programming"><img src="./assets/featured/linux-system-programming.svg" width="49%" alt="13 linux-system-programming"/></a>
   <a href="https://github.com/gunh0/windows-system-programming"><img src="./assets/featured/windows-system-programming.svg" width="49%" alt="14 windows-system-programming"/></a>
@@ -53,11 +70,19 @@
   <a href="https://github.com/gunh0/ml-dataset-automation-aws"><img src="./assets/featured/ml-dataset-automation-aws.svg" width="49%" alt="16 ml-dataset-automation-aws"/></a>
   <a href="https://github.com/gunh0/gunh0.github.io"><img src="./assets/featured/gunh0.github.io.svg" width="49%" alt="17 gunh0.github.io"/></a>
   <a href="https://github.com/gunh0/merkle-tree"><img src="./assets/featured/merkle-tree.svg" width="49%" alt="18 merkle-tree"/></a>
+</p>
+</details>
+
+<details open>
+<summary><b>📚 Foundations (1)</b></summary>
+<br/>
+<p align="center">
   <a href="https://github.com/gunh0/algorithms"><img src="./assets/featured/algorithms.svg" width="49%" alt="19 algorithms"/></a>
 </p>
+</details>
 
 <details>
-<summary><b>🧪 Learning & Playgrounds (9)</b> — click to expand</summary>
+<summary><b>🧪 Learning & Playgrounds (9)</b></summary>
 <br/>
 <p align="center">
   <a href="https://github.com/gunh0/tensorflow-playground"><img src="./assets/featured/tensorflow-playground.svg" width="49%" alt="20 tensorflow-playground"/></a>

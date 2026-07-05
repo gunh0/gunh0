@@ -327,26 +327,17 @@ def build_readme_section(
             for p in cat["projects"]
         ]
 
-    # visible categories share one flat grid; collapsed ones fold below it
-    visible: list[tuple[str, str]] = []
+    # every category is foldable; "collapsed" ones start closed, the rest open
     for cat in categories:
-        if not cat.get("collapsed"):
-            visible.extend(entries(cat))
-    parts.extend(tile_grid(visible))
-
-    for cat in categories:
-        if not cat.get("collapsed"):
-            continue
         count = len(cat["projects"])
-        parts.append("")
-        parts.append("<details>")
-        parts.append(
-            f"<summary><b>{cat['title']} ({count})</b> — click to expand</summary>"
-        )
+        tag = " open" if not cat.get("collapsed") else ""
+        parts.append(f"<details{tag}>")
+        parts.append(f"<summary><b>{cat['title']} ({count})</b></summary>")
         parts.append("<br/>")
         parts.extend(tile_grid(entries(cat)))
         parts.append("</details>")
-    return "\n".join(parts)
+        parts.append("")
+    return "\n".join(parts[:-1] if parts[-1] == "" else parts)
 
 
 def main() -> None:
