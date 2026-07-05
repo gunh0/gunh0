@@ -123,18 +123,20 @@ def build_readme_section(categories: list[dict], total: int) -> str:
         )
         parts.append("")
         parts.append(f"### {cat['title']} {badge}")
-        parts.append("")
-        parts.append("<table>")
         for project in cat["projects"]:
             number += 1
-            parts.append(
-                f"""  <tr>
-    <td align="center"><kbd>&nbsp;{number:02d}&nbsp;</kbd></td>
-    <td><a href="https://github.com/gunh0/{project['name']}"><b>{project['name']}</b></a></td>
-    <td>{esc(project['description'])}</td>
-  </tr>"""
+            stars = (
+                f"https://img.shields.io/github/stars/gunh0/{project['name']}"
+                f"?style=flat-square&label=%E2%98%85&color={cat['badge_color']}"
             )
-        parts.append("</table>")
+            parts.append("")
+            parts.append(
+                f'<kbd>&nbsp;{number:02d}&nbsp;</kbd>&ensp;'
+                f'<a href="https://github.com/gunh0/{project["name"]}"><b>{project["name"]}</b></a>&ensp;'
+                f'<img src="{stars}" alt="GitHub stars" align="top"/>\n'
+                f'<br/>\n'
+                f'<sub>&emsp;&emsp;{esc(project["description"])}</sub>'
+            )
     return "\n".join(parts)
 
 
