@@ -31,7 +31,7 @@
 
 <!-- FEATURED:START -->
 <p align="center">
-  <img src="./assets/featured-projects-stats.svg" alt="Featured Projects: 28 total — Security & DevSecOps 8, AI & LLM Engineering 3, Systems & Infrastructure 7, Foundations 1, Learning & Playgrounds 9"/>
+  <img src="./assets/featured-projects-stats.svg" alt="Featured Projects: 28 total — Security & DevSecOps 8, AI & LLM Engineering 3, Systems & Infrastructure 6, Web & Product 1, Foundations 1, Learning & Playgrounds 9"/>
 </p>
 
 <details open>
@@ -60,7 +60,7 @@
 </details>
 
 <details>
-<summary><b>⚙️ Systems & Infrastructure (7)</b></summary>
+<summary><b>⚙️ Systems & Infrastructure (6)</b></summary>
 <br/>
 <p align="center">
   <a href="https://github.com/gunh0/pcap-tracking"><img src="./assets/featured/pcap-tracking.svg" width="49%" alt="12 pcap-tracking"/></a>
@@ -68,8 +68,15 @@
   <a href="https://github.com/gunh0/windows-system-programming"><img src="./assets/featured/windows-system-programming.svg" width="49%" alt="14 windows-system-programming"/></a>
   <a href="https://github.com/gunh0/docker-hadoop-cluster"><img src="./assets/featured/docker-hadoop-cluster.svg" width="49%" alt="15 docker-hadoop-cluster"/></a>
   <a href="https://github.com/gunh0/ml-dataset-automation-aws"><img src="./assets/featured/ml-dataset-automation-aws.svg" width="49%" alt="16 ml-dataset-automation-aws"/></a>
-  <a href="https://github.com/gunh0/gunh0.github.io"><img src="./assets/featured/gunh0.github.io.svg" width="49%" alt="17 gunh0.github.io"/></a>
-  <a href="https://github.com/gunh0/merkle-tree"><img src="./assets/featured/merkle-tree.svg" width="49%" alt="18 merkle-tree"/></a>
+  <a href="https://github.com/gunh0/merkle-tree"><img src="./assets/featured/merkle-tree.svg" width="49%" alt="17 merkle-tree"/></a>
+</p>
+</details>
+
+<details>
+<summary><b>🌐 Web & Product (1)</b></summary>
+<br/>
+<p align="center">
+  <a href="https://github.com/gunh0/gunh0.github.io"><img src="./assets/featured/gunh0.github.io.svg" width="49%" alt="18 gunh0.github.io"/></a>
 </p>
 </details>
 

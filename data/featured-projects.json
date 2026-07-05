@@ -96,10 +96,6 @@
           "description": "Automated ML dataset serving using Docker containers on AWS"
         },
         {
-          "name": "gunh0.github.io",
-          "description": "Personal tech blog built with Next.js 16 — GitLab-inspired design with dark mode, deployed via SSG"
-        },
-        {
           "name": "merkle-tree",
           "description": "Merkle tree implementation in Go"
         }
@@ -107,6 +103,22 @@
       "accent": "#FF9F0A",
       "tag": "SYSTEMS",
       "collapsed": true
+    },
+    {
+      "id": "web",
+      "title": "🌐 Web & Product",
+      "svg_label": "🌐 WEB & PRODUCT",
+      "badge_color": "17A2B8",
+      "svg_color": "#0969da",
+      "accent": "#40C8E0",
+      "tag": "WEB",
+      "collapsed": true,
+      "projects": [
+        {
+          "name": "gunh0.github.io",
+          "description": "Personal tech blog built with Next.js 16 — GitLab-inspired design with dark mode, deployed via SSG"
+        }
+      ]
     },
     {
       "id": "foundations",
