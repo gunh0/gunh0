@@ -41,7 +41,8 @@
         }
       ],
       "accent": "#FF375F",
-      "tag": "SECURITY"
+      "tag": "SECURITY",
+      "collapsed": false
     },
     {
       "id": "ai",
@@ -64,7 +65,8 @@
         }
       ],
       "accent": "#30D158",
-      "tag": "AI"
+      "tag": "AI",
+      "collapsed": true
     },
     {
       "id": "systems",
@@ -103,7 +105,8 @@
         }
       ],
       "accent": "#FF9F0A",
-      "tag": "SYSTEMS"
+      "tag": "SYSTEMS",
+      "collapsed": true
     },
     {
       "id": "foundations",
@@ -118,7 +121,8 @@
         }
       ],
       "accent": "#0A84FF",
-      "tag": "FOUNDATIONS"
+      "tag": "FOUNDATIONS",
+      "collapsed": true
     },
     {
       "id": "learning",

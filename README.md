@@ -49,7 +49,7 @@
 </p>
 </details>
 
-<details open>
+<details>
 <summary><b>🤖 AI & LLM Engineering (3)</b></summary>
 <br/>
 <p align="center">
@@ -59,7 +59,7 @@
 </p>
 </details>
 
-<details open>
+<details>
 <summary><b>⚙️ Systems & Infrastructure (7)</b></summary>
 <br/>
 <p align="center">
@@ -73,7 +73,7 @@
 </p>
 </details>
 
-<details open>
+<details>
 <summary><b>📚 Foundations (1)</b></summary>
 <br/>
 <p align="center">
