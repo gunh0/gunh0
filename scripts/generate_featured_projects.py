@@ -36,7 +36,7 @@ README = ROOT / "README.md"
 
 WIDTH = 820
 TILE_W = 400
-TILE_H = 104
+TILE_H = 84
 
 FONT_STACK = (
     '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", '
@@ -65,19 +65,24 @@ def fetch_stars(name: str) -> int | None:
         return None
 
 
-def wrap_desc(desc: str, width: int = 55, max_lines: int = 2) -> list[str]:
+def wrap_desc(desc: str, widths: tuple[int, ...] = (55, 42)) -> list[str]:
+    """Wrap to at most len(widths) lines; the last line is shorter to leave
+    room for the category tag pill in the tile's bottom-right corner."""
     lines: list[str] = []
     current = ""
-    for word in desc.split():
+    words = desc.split()
+    for i, word in enumerate(words):
+        width = widths[min(len(lines), len(widths) - 1)]
         if not current or len(current) + 1 + len(word) <= width:
             current = f"{current} {word}".strip()
         else:
             lines.append(current)
             current = word
     lines.append(current)
-    if len(lines) > max_lines:
-        lines = lines[:max_lines]
-        lines[-1] = lines[-1][: width - 1].rstrip() + "…"
+    if len(lines) > len(widths):
+        lines = lines[: len(widths)]
+        last_w = widths[-1]
+        lines[-1] = lines[-1][: last_w - 1].rstrip() + "…"
     return lines
 
 
@@ -215,30 +220,34 @@ def build_stats_svg(categories: list[dict], total: int) -> str:
 
 
 def build_tile_svg(
-    number: int, name: str, desc: str, accent: str, star_count: int | None
+    number: int, name: str, desc: str, accent: str, tag: str, star_count: int | None
 ) -> str:
-    """One project = one small glass tile, so each can carry its own link."""
-    alt = f"{number:02d} {name} — {desc}"
+    """One project = one compact glass tile, so each can carry its own link.
+    The category is shown as a tag pill (bottom-right), not just by color."""
+    alt = f"{number:02d} {name} [{tag}] — {desc}"
     delay = 0.1 + (number - 1) * 0.05
     lines = wrap_desc(desc)
 
     star_avail = 60 if star_count is not None else 0
-    name_avail = TILE_W - 64 - 16 - star_avail
+    name_avail = TILE_W - 62 - 16 - star_avail
     name_attrs = ""
-    if len(name) * 7.6 > name_avail:
+    if len(name) * 7.5 > name_avail:
         name_attrs = f' textLength="{name_avail}" lengthAdjust="spacingAndGlyphs"'
 
     star_text = ""
     if star_count is not None:
         star_text = (
-            f'\n    <text x="{TILE_W - 16}" y="31" text-anchor="end" class="star" '
+            f'\n    <text x="{TILE_W - 16}" y="27" text-anchor="end" class="star" '
             f'fill="{accent}">&#9733; {star_count}</text>'
         )
 
     desc_lines = "\n".join(
-        f'    <text x="20" y="{60 + 18 * i}" class="desc">{esc(line)}</text>'
+        f'    <text x="20" y="{50 + 16 * i}" class="desc">{esc(line)}</text>'
         for i, line in enumerate(lines)
     )
+
+    pill_w = round(len(tag) * 6.6) + 16
+    pill_x = TILE_W - 16 - pill_w
 
     return f"""<svg width="{TILE_W}" height="{TILE_H}" viewBox="0 0 {TILE_W} {TILE_H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{esc(alt)}">
   <style>
@@ -248,8 +257,9 @@ def build_tile_svg(
     }}
     .num {{ font-size: 11px; font-weight: 700; font-family: "SFMono-Regular", Consolas, Menlo, monospace; }}
     .name {{ font-size: 13.5px; font-weight: 700; }}
-    .star {{ font-size: 12px; font-weight: 700; }}
-    .desc {{ font-size: 11.5px; fill: #6e7781; }}
+    .star {{ font-size: 11.5px; font-weight: 700; }}
+    .desc {{ font-size: 11px; fill: #6e7781; }}
+    .tag {{ font-size: 9px; font-weight: 700; letter-spacing: 1px; }}
     .blob {{ animation: drift 18s ease-in-out infinite alternate; }}
     .tile {{ animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) {delay:.2f}s backwards; }}
     @keyframes drift {{ to {{ transform: translate(-30px, 18px); }} }}
@@ -261,23 +271,26 @@ def build_tile_svg(
       <feGaussianBlur stdDeviation="28"/>
     </filter>
     <clipPath id="t-clip">
-      <rect width="{TILE_W}" height="{TILE_H}" rx="16"/>
+      <rect width="{TILE_W}" height="{TILE_H}" rx="14"/>
     </clipPath>
   </defs>
 
   <g class="tile">
-    <rect width="{TILE_W}" height="{TILE_H}" rx="16" fill="#f2f4f8"/>
+    <rect width="{TILE_W}" height="{TILE_H}" rx="14" fill="#f2f4f8"/>
     <g clip-path="url(#t-clip)">
-      <circle class="blob" cx="{TILE_W - 60}" cy="8" r="80" fill="{accent}" opacity="0.24" filter="url(#t-blur)"/>
+      <circle class="blob" cx="{TILE_W - 60}" cy="6" r="76" fill="{accent}" opacity="0.24" filter="url(#t-blur)"/>
     </g>
-    <rect x="2" y="2" width="{TILE_W - 4}" height="{TILE_H - 4}" rx="14"
+    <rect x="2" y="2" width="{TILE_W - 4}" height="{TILE_H - 4}" rx="12"
           fill="rgba(255,255,255,0.62)" stroke="rgba(255,255,255,0.95)" stroke-width="1.5"/>
-    <rect x="8" y="12" width="5" height="{TILE_H - 24}" rx="2.5" fill="{accent}" opacity="0.85"/>
+    <rect x="8" y="10" width="5" height="{TILE_H - 20}" rx="2.5" fill="{accent}" opacity="0.85"/>
 
-    <rect x="24" y="15" width="34" height="21" rx="7" fill="{accent}" opacity="0.13"/>
-    <text x="41" y="30" text-anchor="middle" class="num" fill="{accent}">{number:02d}</text>
-    <text x="68" y="30" class="name"{name_attrs}>{esc(name)}</text>{star_text}
+    <rect x="22" y="12" width="32" height="19" rx="6" fill="{accent}" opacity="0.13"/>
+    <text x="38" y="26" text-anchor="middle" class="num" fill="{accent}">{number:02d}</text>
+    <text x="62" y="26" class="name"{name_attrs}>{esc(name)}</text>{star_text}
 {desc_lines}
+
+    <rect x="{pill_x}" y="{TILE_H - 30}" width="{pill_w}" height="17" rx="8.5" fill="{accent}" opacity="0.13"/>
+    <text x="{pill_x + pill_w / 2:.0f}" y="{TILE_H - 18}" text-anchor="middle" class="tag" fill="{accent}">{esc(tag)}</text>
   </g>
 </svg>
 """
@@ -325,11 +338,12 @@ def main() -> None:
     number = 0
     for cat in categories:
         accent = cat.get("accent", cat["svg_color"])
+        tag = cat.get("tag", plain_title(cat["title"]).upper())
         for project in cat["projects"]:
             number += 1
             name = project["name"]
             tile = build_tile_svg(
-                number, name, project["description"], accent, stars.get(name)
+                number, name, project["description"], accent, tag, stars.get(name)
             )
             (TILES_DIR / f"{name}.svg").write_text(tile, encoding="utf-8")
             tiles.append((name, f"{number:02d} {name}"))

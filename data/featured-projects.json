@@ -40,7 +40,8 @@
           "description": "CNN model classifying grayscale binary images as ransomware or benign"
         }
       ],
-      "accent": "#FF375F"
+      "accent": "#FF375F",
+      "tag": "SECURITY"
     },
     {
       "id": "ai",
@@ -62,7 +63,8 @@
           "description": "Tabular Q-learning walkthroughs with Gymnasium, from a visual route planner to Taxi-v3"
         }
       ],
-      "accent": "#30D158"
+      "accent": "#30D158",
+      "tag": "AI"
     },
     {
       "id": "systems",
@@ -96,7 +98,8 @@
           "description": "Merkle tree implementation in Go"
         }
       ],
-      "accent": "#FF9F0A"
+      "accent": "#FF9F0A",
+      "tag": "SYSTEMS"
     },
     {
       "id": "foundations",
@@ -110,7 +113,8 @@
           "description": "Solutions for algorithm problems in C/C++"
         }
       ],
-      "accent": "#0A84FF"
+      "accent": "#0A84FF",
+      "tag": "FOUNDATIONS"
     }
   ]
 }
