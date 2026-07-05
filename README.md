@@ -6,7 +6,7 @@
 
 **I am committed to becoming an expert equipped with the powerful tool of <kbd>&nbsp;⚒️ Development&nbsp;</kbd> and the strategic blueprint of <kbd>&nbsp;🛡️ Cybersecurity&nbsp;</kbd>, seamlessly integrating both to create a robust defense against evolving threats. My primary focus lies in <kbd>&nbsp;📊 Data-driven Security&nbsp;</kbd>, where insights derived from data guide decision-making processes to enhance the overall security posture.**
 
-**Furthermore, I am actively engaged in advancing my expertise in the realm of <kbd>&nbsp;🔄 DevSecOps&nbsp;</kbd>, with a specialized emphasis on securing environments within the `Cloud` and `DevOps` landscapes. Recognizing the dynamic nature of these domains, I am dedicated to staying at the forefront of technology trends and implementing security measures that align with the principles of `CI` · `CD` · `Collaboration`.**
+**Furthermore, I am actively engaged in advancing my expertise in the realm of <kbd>&nbsp;🔄 DevSecOps&nbsp;</kbd>, with a specialized emphasis on securing environments within the <kbd>&nbsp;☁️ Cloud&nbsp;</kbd> and <kbd>&nbsp;♾️ DevOps&nbsp;</kbd> landscapes. Recognizing the dynamic nature of these domains, I am dedicated to staying at the forefront of technology trends and implementing security measures that align with the principles of <kbd>&nbsp;🔁 CI&nbsp;</kbd> <kbd>&nbsp;🚀 CD&nbsp;</kbd> <kbd>&nbsp;🤝 Collaboration&nbsp;</kbd>.**
 
 <p align="center">
   <a href="https://www.linkedin.com/in/gunh0902/">

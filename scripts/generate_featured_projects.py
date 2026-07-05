@@ -142,7 +142,7 @@ GLASS_CSS = f"""    text {{
       font-family: {FONT_STACK};
       fill: #1f2328;
     }}
-    .header {{ font-size: 19px; font-weight: 700; letter-spacing: 0.5px; }}
+    .header {{ font-size: 16px; font-weight: 700; letter-spacing: 0.5px; }}
     .dim {{ fill: #6e7781; }}
     .cursor {{ animation: blink 1.1s step-end infinite; }}
     .blob {{ animation: drift 16s ease-in-out infinite alternate; }}
@@ -161,7 +161,7 @@ def build_stats_svg(categories: list[dict], total: int) -> str:
     )
     aria = f"Featured Projects: {total} total — {summary}"
     n = len(categories)
-    height = 104 + 47 * n + 20
+    height = 84 + 39 * n + 14
     accents = [c.get("accent", c["svg_color"]) for c in categories]
     head, sheen = glass_scaffold(height, accents, "st")
 
@@ -176,14 +176,14 @@ def build_stats_svg(categories: list[dict], total: int) -> str:
     for i, cat in enumerate(categories):
         count = len(cat["projects"])
         accent = accents[i]
-        bar_y = 104 + 47 * i
-        text_y = bar_y + 13
+        bar_y = 84 + 39 * i
+        text_y = bar_y + 11
         bar_w = round(380 * count / total)
         rows.append(
             f"""  <!-- {plain_title(cat['title'])} {count}/{total} -->
   <text x="48" y="{text_y}" class="label">{esc(cat['svg_label'])}</text>
-  <rect x="340" y="{bar_y}" width="380" height="14" rx="7" fill="rgba(31,35,40,0.07)"/>
-  <rect x="340" y="{bar_y}" width="{bar_w}" height="14" rx="7" fill="{accent}" class="bar d{i + 1}"/>
+  <rect x="340" y="{bar_y}" width="380" height="12" rx="6" fill="rgba(31,35,40,0.07)"/>
+  <rect x="340" y="{bar_y}" width="{bar_w}" height="12" rx="6" fill="{accent}" class="bar d{i + 1}"/>
   <text x="772" y="{text_y}" text-anchor="end" class="count fade f{i + 1}" fill="{accent}">{count}</text>"""
         )
     rows_svg = "\n\n".join(rows)
@@ -191,9 +191,9 @@ def build_stats_svg(categories: list[dict], total: int) -> str:
     return f"""<svg width="{WIDTH}" height="{height}" viewBox="0 0 {WIDTH} {height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{esc(aria)}">
   <style>
 {GLASS_CSS}
-    .label {{ font-size: 15px; font-weight: 600; }}
-    .count {{ font-size: 15px; font-weight: 700; }}
-    .total {{ font-size: 18px; font-weight: 700; }}
+    .label {{ font-size: 13.5px; font-weight: 600; }}
+    .count {{ font-size: 13.5px; font-weight: 700; }}
+    .total {{ font-size: 15px; font-weight: 700; }}
     .bar {{
       transform-box: fill-box;
       transform-origin: left;
@@ -209,8 +209,8 @@ def build_stats_svg(categories: list[dict], total: int) -> str:
 {head}
 
   <!-- header -->
-  <text x="48" y="62" class="header">Featured Projects<tspan class="cursor" fill="#6e7781">_</tspan></text>
-  <text x="772" y="62" text-anchor="end" class="total"><tspan class="dim">TOTAL </tspan>{total}</text>
+  <text x="48" y="54" class="header">Featured Projects<tspan class="cursor" fill="#6e7781">_</tspan></text>
+  <text x="772" y="54" text-anchor="end" class="total"><tspan class="dim">TOTAL </tspan>{total}</text>
 
 {rows_svg}
 
