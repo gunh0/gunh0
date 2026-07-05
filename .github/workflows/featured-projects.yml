@@ -1,0 +1,33 @@
+name: Update Featured Projects
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "data/featured-projects.json"
+      - "scripts/generate_featured_projects.py"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate README section and stats SVG
+        run: python scripts/generate_featured_projects.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md assets/featured-projects-stats.svg
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "chore: regenerate featured projects"
+          git push

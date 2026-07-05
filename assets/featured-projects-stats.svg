@@ -1,0 +1,65 @@
+<svg width="820" height="270" viewBox="0 0 820 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Featured Projects: 18 total — Security &amp; DevSecOps 8, AI &amp; LLM Engineering 3, Systems &amp; Infrastructure 6, Foundations 1">
+  <style>
+    text {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      fill: #24292f;
+    }
+    .label { font-size: 15px; }
+    .count { font-size: 15px; font-weight: bold; }
+    .header { font-size: 18px; font-weight: bold; fill: #1f2328; letter-spacing: 2px; }
+    .total { font-size: 18px; font-weight: bold; }
+    .dim { fill: #6e7781; }
+    .bar {
+      transform-box: fill-box;
+      transform-origin: left;
+      animation: grow 1.1s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    }
+    .d1 { animation-delay: 0.15s; }
+    .d2 { animation-delay: 0.35s; }
+    .d3 { animation-delay: 0.55s; }
+    .d4 { animation-delay: 0.75s; }
+    .fade {
+      animation: fadein 0.5s ease-out backwards;
+    }
+    .f1 { animation-delay: 0.9s; }
+    .f2 { animation-delay: 1.1s; }
+    .f3 { animation-delay: 1.3s; }
+    .f4 { animation-delay: 1.5s; }
+    .cursor { animation: blink 1.1s step-end infinite; }
+    @keyframes grow { from { transform: scaleX(0); } }
+    @keyframes fadein { from { opacity: 0; } }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+
+  <!-- card -->
+  <rect x="1" y="1" width="818" height="268" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+
+  <!-- header -->
+  <text x="32" y="48" class="header">&#9656; FEATURED PROJECTS<tspan class="cursor">_</tspan></text>
+  <text x="788" y="48" text-anchor="end" class="total"><tspan class="dim">TOTAL </tspan><tspan fill="#1f2328">18</tspan></text>
+  <line x1="32" y1="66" x2="788" y2="66" stroke="#d0d7de" stroke-width="1"/>
+
+  <!-- row 1: Security & DevSecOps 8/18 -->
+  <text x="32" y="107" class="label">🔒 SECURITY &amp; DEVSECOPS</text>
+  <rect x="330" y="93" width="380" height="16" rx="8" fill="#eaeef2"/>
+  <rect x="330" y="93" width="169" height="16" rx="8" fill="#cf222e" class="bar d1"/>
+  <text x="726" y="107" class="count fade f1" fill="#cf222e">8</text>
+
+  <!-- row 2: AI & LLM Engineering 3/18 -->
+  <text x="32" y="150" class="label">🤖 AI &amp; LLM</text>
+  <rect x="330" y="136" width="380" height="16" rx="8" fill="#eaeef2"/>
+  <rect x="330" y="136" width="63" height="16" rx="8" fill="#1a7f37" class="bar d2"/>
+  <text x="726" y="150" class="count fade f2" fill="#1a7f37">3</text>
+
+  <!-- row 3: Systems & Infrastructure 6/18 -->
+  <text x="32" y="193" class="label">⚙️ SYSTEMS &amp; INFRA</text>
+  <rect x="330" y="179" width="380" height="16" rx="8" fill="#eaeef2"/>
+  <rect x="330" y="179" width="127" height="16" rx="8" fill="#bf8700" class="bar d3"/>
+  <text x="726" y="193" class="count fade f3" fill="#bf8700">6</text>
+
+  <!-- row 4: Foundations 1/18 -->
+  <text x="32" y="236" class="label">📚 FOUNDATIONS</text>
+  <rect x="330" y="222" width="380" height="16" rx="8" fill="#eaeef2"/>
+  <rect x="330" y="222" width="21" height="16" rx="8" fill="#0969da" class="bar d4"/>
+  <text x="726" y="236" class="count fade f4" fill="#0969da">1</text>
+</svg>

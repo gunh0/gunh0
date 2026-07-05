@@ -1,0 +1,58 @@
+{
+  "categories": [
+    {
+      "id": "security",
+      "title": "🔐 Security & DevSecOps",
+      "svg_label": "🔒 SECURITY & DEVSECOPS",
+      "badge_color": "DC143C",
+      "svg_color": "#cf222e",
+      "projects": [
+        { "name": "kr-vulhub", "description": "Docker-compose-based vulnerable environments for hands-on exploitation and verification (Korean edition of Vulhub)" },
+        { "name": "whs-utils", "description": "Essential utilities for conducting classes in the WhiteHat School security education program" },
+        { "name": "aws-security-hub", "description": "Go-based CSPM tool automating security audits of AWS resources against Security Hub controls" },
+        { "name": "azure-security-hub", "description": "CLI tool for inspecting and monitoring the security posture of Azure resources" },
+        { "name": "openstack-security-hub", "description": "Security compliance checker for OpenStack environments, written in Go" },
+        { "name": "os-security-hub", "description": "Automated security auditing and hardening toolkit for multiple operating systems" },
+        { "name": "tor-network-analyzer", "description": "Docker-based analyzer for Tor hidden services with a real-time web dashboard" },
+        { "name": "malware-image-classification", "description": "CNN model classifying grayscale binary images as ransomware or benign" }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "🤖 AI & LLM Engineering",
+      "svg_label": "🤖 AI & LLM",
+      "badge_color": "10A37F",
+      "svg_color": "#1a7f37",
+      "projects": [
+        { "name": "kr-mcp-from-scratch", "description": "Korean hands-on guide to MCP, RAG, and project context management" },
+        { "name": "llm-quota-monitor", "description": "Terminal dashboard for real-time quota monitoring across Claude Code, Codex & Kiro" },
+        { "name": "reinforcement-learning-q-learning-gymnasium", "description": "Tabular Q-learning walkthroughs with Gymnasium, from a visual route planner to Taxi-v3" }
+      ]
+    },
+    {
+      "id": "systems",
+      "title": "⚙️ Systems & Infrastructure",
+      "svg_label": "⚙️ SYSTEMS & INFRA",
+      "badge_color": "FF8C00",
+      "svg_color": "#bf8700",
+      "projects": [
+        { "name": "pcap-tracking", "description": "Real-time network packet capture and monitoring system built with Go + Next.js and live WebSocket updates" },
+        { "name": "linux-system-programming", "description": "C examples for processes, file systems, memory, and IPC, plus security vulnerability demos in Docker" },
+        { "name": "windows-system-programming", "description": "Windows system programming from the perspective of synchronous and asynchronous I/O" },
+        { "name": "docker-hadoop-cluster", "description": "Dockerized Hadoop cluster with HDFS and YARN for local development and testing" },
+        { "name": "ml-dataset-automation-aws", "description": "Automated ML dataset serving using Docker containers on AWS" },
+        { "name": "merkle-tree", "description": "Merkle tree implementation in Go" }
+      ]
+    },
+    {
+      "id": "foundations",
+      "title": "📚 Foundations",
+      "svg_label": "📚 FOUNDATIONS",
+      "badge_color": "2F81F7",
+      "svg_color": "#0969da",
+      "projects": [
+        { "name": "algorithms", "description": "Solutions for algorithm problems in C/C++" }
+      ]
+    }
+  ]
+}
