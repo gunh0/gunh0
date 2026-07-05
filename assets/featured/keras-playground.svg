@@ -36,7 +36,7 @@
     <rect x="22" y="12" width="32" height="19" rx="6" fill="#BF5AF2" opacity="0.13"/>
     <text x="38" y="26" text-anchor="middle" class="num" fill="#BF5AF2">24</text>
     <text x="62" y="26" class="name">keras-playground</text>
-    <text x="384" y="27" text-anchor="end" class="star" fill="#BF5AF2">&#9733; 0</text>
+    <text x="384" y="27" text-anchor="end" class="star" fill="#BF5AF2">&#9733; 1</text>
     <text x="20" y="50" class="desc">Exploring Keras, a powerful deep learning library</text>
 
     <rect x="315" y="54" width="69" height="17" rx="8.5" fill="#BF5AF2" opacity="0.13"/>
