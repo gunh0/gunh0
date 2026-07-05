@@ -3,19 +3,22 @@
 from the single source of truth: data/featured-projects.json.
 
 Outputs:
-- assets/featured-projects-stats.svg  — category gauge card (glassmorphism)
-- assets/featured-projects-list.svg   — animated project index card (glassmorphism)
-- README.md between FEATURED:START/END markers (images + collapsible text list)
+- assets/featured-projects-stats.svg — category gauge card (glassmorphism)
+- assets/featured/<repo>.svg         — one glass tile per project, laid out
+  as a two-column grid in the README with each tile wrapped in its own link
+- README.md between FEATURED:START/END markers
 
 Counts, gauge widths, numbering, and star counts are all derived, so adding
 or removing a project only requires editing the JSON (CI does the rest).
 Star counts are fetched from the GitHub API at generation time; on network
-failure the star text is simply omitted.
+failure the star text is simply omitted. Stale tiles for removed projects
+are deleted automatically.
 
 GitHub strips <style>/style attributes from README HTML, but CSS inside an
 SVG file served as an image survives — including animations. backdrop-filter
 does not work in SVG-as-image, so the glass look is built from blurred color
-blobs behind translucent rgba() panels instead.
+blobs behind translucent rgba() panels instead. Per-tile entrance delays are
+baked into each SVG so the grid still rises in a stagger.
 """
 
 import html
@@ -28,11 +31,12 @@ import urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "featured-projects.json"
 STATS_SVG = ROOT / "assets" / "featured-projects-stats.svg"
-LIST_SVG = ROOT / "assets" / "featured-projects-list.svg"
+TILES_DIR = ROOT / "assets" / "featured"
 README = ROOT / "README.md"
 
 WIDTH = 820
-DESC_MAX = 104
+TILE_W = 400
+TILE_H = 104
 
 FONT_STACK = (
     '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", '
@@ -61,10 +65,25 @@ def fetch_stars(name: str) -> int | None:
         return None
 
 
-def glass_scaffold(height: int, accents: list[str], uid: str) -> tuple[str, str]:
-    """Shared glassmorphism scaffold: aurora blobs, glass panel, sheen sweep.
+def wrap_desc(desc: str, width: int = 55, max_lines: int = 2) -> list[str]:
+    lines: list[str] = []
+    current = ""
+    for word in desc.split():
+        if not current or len(current) + 1 + len(word) <= width:
+            current = f"{current} {word}".strip()
+        else:
+            lines.append(current)
+            current = word
+    lines.append(current)
+    if len(lines) > max_lines:
+        lines = lines[:max_lines]
+        lines[-1] = lines[-1][: width - 1].rstrip() + "…"
+    return lines
 
-    Returns (defs_and_background, panel_and_sheen) to wrap card content.
+
+def glass_scaffold(height: int, accents: list[str], uid: str) -> tuple[str, str]:
+    """Shared glassmorphism scaffold for full-width cards: aurora blobs,
+    glass panel, sheen sweep. Returns (defs_and_background, sheen_overlay).
     """
     blob_geometry = [
         (120, 60, 170), (700, 40, 150), (90, height - 60, 160), (740, height - 50, 180),
@@ -195,86 +214,78 @@ def build_stats_svg(categories: list[dict], total: int) -> str:
 """
 
 
-def build_list_svg(categories: list[dict], total: int, stars: dict[str, int | None]) -> str:
-    aria = f"Project index: {total} featured repositories with descriptions"
-    accents = [c.get("accent", c["svg_color"]) for c in categories]
+def build_tile_svg(
+    number: int, name: str, desc: str, accent: str, star_count: int | None
+) -> str:
+    """One project = one small glass tile, so each can carry its own link."""
+    alt = f"{number:02d} {name} — {desc}"
+    delay = 0.1 + (number - 1) * 0.05
+    lines = wrap_desc(desc)
 
-    body = []
-    y = 108
-    slot = 0
-    number = 0
-    for ci, cat in enumerate(categories):
-        accent = accents[ci]
-        count = len(cat["projects"])
-        delay = 0.3 + slot * 0.06
-        body.append(
-            f"""  <g class="cat" style="animation-delay: {delay:.2f}s">
-    <circle cx="54" cy="{y - 5}" r="5" fill="{accent}"/>
-    <text x="70" y="{y}" class="cat-label">{esc(plain_title(cat['title']).upper())}</text>
-    <text x="772" y="{y}" text-anchor="end" class="cat-count" fill="{accent}">{count}<tspan class="dim" font-weight="400">/{total}</tspan></text>
-  </g>"""
+    star_avail = 60 if star_count is not None else 0
+    name_avail = TILE_W - 64 - 16 - star_avail
+    name_attrs = ""
+    if len(name) * 7.6 > name_avail:
+        name_attrs = f' textLength="{name_avail}" lengthAdjust="spacingAndGlyphs"'
+
+    star_text = ""
+    if star_count is not None:
+        star_text = (
+            f'\n    <text x="{TILE_W - 16}" y="31" text-anchor="end" class="star" '
+            f'fill="{accent}">&#9733; {star_count}</text>'
         )
-        slot += 1
-        y += 30
 
-        for project in cat["projects"]:
-            number += 1
-            name = project["name"]
-            desc = project["description"]
-            if len(desc) > DESC_MAX:
-                desc = desc[: DESC_MAX - 1].rstrip() + "…"
-            star_text = ""
-            if stars.get(name) is not None:
-                star_text = (
-                    f'\n    <text x="772" y="{y}" text-anchor="end" class="star" '
-                    f'fill="{accent}">&#9733; {stars[name]}</text>'
-                )
-            delay = 0.3 + slot * 0.06
-            body.append(
-                f"""  <g class="row" style="animation-delay: {delay:.2f}s">
-    <rect x="48" y="{y - 15}" width="34" height="21" rx="7" fill="rgba(255,255,255,0.75)" stroke="rgba(31,35,40,0.10)"/>
-    <text x="65" y="{y}" text-anchor="middle" class="num" fill="{accent}">{number:02d}</text>
-    <text x="94" y="{y}" class="name">{esc(name)}</text>{star_text}
-    <text x="94" y="{y + 18}" class="desc">{esc(desc)}</text>
-  </g>"""
-            )
-            slot += 1
-            y += 46
+    desc_lines = "\n".join(
+        f'    <text x="20" y="{60 + 18 * i}" class="desc">{esc(line)}</text>'
+        for i, line in enumerate(lines)
+    )
 
-        y += 16
-
-    height = y + 6
-    body_svg = "\n\n".join(body)
-    head, sheen = glass_scaffold(height, accents, "ix")
-
-    return f"""<svg width="{WIDTH}" height="{height}" viewBox="0 0 {WIDTH} {height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{esc(aria)}">
+    return f"""<svg width="{TILE_W}" height="{TILE_H}" viewBox="0 0 {TILE_W} {TILE_H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{esc(alt)}">
   <style>
-{GLASS_CSS}
-    .cat-label {{ font-size: 13px; font-weight: 700; letter-spacing: 1.5px; fill: #57606a; }}
-    .cat-count {{ font-size: 13px; font-weight: 700; }}
+    text {{
+      font-family: {FONT_STACK};
+      fill: #1f2328;
+    }}
     .num {{ font-size: 11px; font-weight: 700; font-family: "SFMono-Regular", Consolas, Menlo, monospace; }}
-    .name {{ font-size: 14.5px; font-weight: 700; }}
+    .name {{ font-size: 13.5px; font-weight: 700; }}
     .star {{ font-size: 12px; font-weight: 700; }}
-    .desc {{ font-size: 12px; fill: #6e7781; }}
-    .row {{ animation: slide-left 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards; }}
-    .cat {{ animation: slide-right 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards; }}
-    @keyframes slide-left {{ from {{ opacity: 0; transform: translateX(-18px); }} }}
-    @keyframes slide-right {{ from {{ opacity: 0; transform: translateX(18px); }} }}
+    .desc {{ font-size: 11.5px; fill: #6e7781; }}
+    .blob {{ animation: drift 18s ease-in-out infinite alternate; }}
+    .tile {{ animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) {delay:.2f}s backwards; }}
+    @keyframes drift {{ to {{ transform: translate(-30px, 18px); }} }}
+    @keyframes rise {{ from {{ opacity: 0; transform: translateY(12px); }} }}
   </style>
 
-{head}
+  <defs>
+    <filter id="t-blur" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <clipPath id="t-clip">
+      <rect width="{TILE_W}" height="{TILE_H}" rx="16"/>
+    </clipPath>
+  </defs>
 
-  <!-- header -->
-  <text x="48" y="62" class="header">Project Index<tspan class="cursor" fill="#6e7781">_</tspan></text>
+  <g class="tile">
+    <rect width="{TILE_W}" height="{TILE_H}" rx="16" fill="#f2f4f8"/>
+    <g clip-path="url(#t-clip)">
+      <circle class="blob" cx="{TILE_W - 60}" cy="8" r="80" fill="{accent}" opacity="0.24" filter="url(#t-blur)"/>
+    </g>
+    <rect x="2" y="2" width="{TILE_W - 4}" height="{TILE_H - 4}" rx="14"
+          fill="rgba(255,255,255,0.62)" stroke="rgba(255,255,255,0.95)" stroke-width="1.5"/>
+    <rect x="8" y="12" width="5" height="{TILE_H - 24}" rx="2.5" fill="{accent}" opacity="0.85"/>
 
-{body_svg}
-
-{sheen}
+    <rect x="24" y="15" width="34" height="21" rx="7" fill="{accent}" opacity="0.13"/>
+    <text x="41" y="30" text-anchor="middle" class="num" fill="{accent}">{number:02d}</text>
+    <text x="68" y="30" class="name"{name_attrs}>{esc(name)}</text>{star_text}
+{desc_lines}
+  </g>
 </svg>
 """
 
 
-def build_readme_section(categories: list[dict], total: int) -> str:
+def build_readme_section(
+    categories: list[dict], total: int, tiles: list[tuple[str, str]]
+) -> str:
     summary = ", ".join(
         f"{plain_title(c['title'])} {len(c['projects'])}" for c in categories
     )
@@ -285,43 +296,13 @@ def build_readme_section(categories: list[dict], total: int) -> str:
         "</p>",
         "",
         '<p align="center">',
-        '  <a href="https://github.com/gunh0?tab=repositories">',
-        '    <img src="./assets/featured-projects-list.svg" '
-        f'alt="Project index: {total} featured repositories"/>',
-        "  </a>",
-        "</p>",
-        "",
-        "<details>",
-        "<summary><b>&#128209; Text version with clickable links</b></summary>",
-        "<br/>",
     ]
-
-    number = 0
-    for cat in categories:
-        count = len(cat["projects"])
-        unit = "repo" if count == 1 else "repos"
-        badge = (
-            f"![{count} {unit}](https://img.shields.io/badge/"
-            f"-{count}%2F{total}-{cat['badge_color']}?style=flat-square)"
+    for name, tile_alt in tiles:
+        parts.append(
+            f'  <a href="https://github.com/gunh0/{name}">'
+            f'<img src="./assets/featured/{name}.svg" width="49%" alt="{tile_alt}"/></a>'
         )
-        parts.append("")
-        parts.append(f"#### {cat['title']} {badge}")
-        for project in cat["projects"]:
-            number += 1
-            stars_badge = (
-                f"https://img.shields.io/github/stars/gunh0/{project['name']}"
-                f"?style=flat-square&label=%E2%98%85&color={cat['badge_color']}"
-            )
-            parts.append("")
-            parts.append(
-                f'<kbd>&nbsp;{number:02d}&nbsp;</kbd>&ensp;'
-                f'<a href="https://github.com/gunh0/{project["name"]}"><b>{project["name"]}</b></a>&ensp;'
-                f'<img src="{stars_badge}" alt="GitHub stars" align="top"/>\n'
-                f'<br/>\n'
-                f'<sub>&emsp;&emsp;{esc(project["description"])}</sub>'
-            )
-    parts.append("")
-    parts.append("</details>")
+    parts.append("</p>")
     return "\n".join(parts)
 
 
@@ -338,10 +319,28 @@ def main() -> None:
     fetched = sum(1 for v in stars.values() if v is not None)
 
     STATS_SVG.write_text(build_stats_svg(categories, total), encoding="utf-8")
-    LIST_SVG.write_text(build_list_svg(categories, total, stars), encoding="utf-8")
+
+    TILES_DIR.mkdir(parents=True, exist_ok=True)
+    tiles: list[tuple[str, str]] = []
+    number = 0
+    for cat in categories:
+        accent = cat.get("accent", cat["svg_color"])
+        for project in cat["projects"]:
+            number += 1
+            name = project["name"]
+            tile = build_tile_svg(
+                number, name, project["description"], accent, stars.get(name)
+            )
+            (TILES_DIR / f"{name}.svg").write_text(tile, encoding="utf-8")
+            tiles.append((name, f"{number:02d} {name}"))
+
+    current = {name for name, _ in tiles}
+    for stale in TILES_DIR.glob("*.svg"):
+        if stale.stem not in current:
+            stale.unlink()
 
     readme = README.read_text(encoding="utf-8")
-    section = build_readme_section(categories, total)
+    section = build_readme_section(categories, total, tiles)
     updated, replaced = re.subn(
         r"(<!-- FEATURED:START -->\n).*?(\n<!-- FEATURED:END -->)",
         lambda m: m.group(1) + section + m.group(2),
