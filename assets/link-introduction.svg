@@ -1,0 +1,42 @@
+<svg width="380" height="56" viewBox="0 0 380 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Introduction — Korean profile page">
+  <style>
+    text {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      fill: #1f2328;
+    }
+    .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2px; }
+    .btn-label { font-size: 11px; font-weight: 700; fill: #ffffff; letter-spacing: 0.5px; }
+    .blob { animation: drift 14s ease-in-out infinite alternate; }
+    .btn {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: pulse 2.6s ease-in-out infinite;
+    }
+    @keyframes drift { to { transform: translate(40px, 8px); } }
+    @keyframes pulse { 50% { transform: scale(1.03); } }
+  </style>
+
+  <defs>
+    <filter id="li-blur" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <clipPath id="li-clip">
+      <rect width="380" height="56" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <rect width="380" height="56" rx="14" fill="#f2f4f8"/>
+  <g clip-path="url(#li-clip)">
+    <circle class="blob" cx="90" cy="10" r="70" fill="#5E5CE6" opacity="0.22" filter="url(#li-blur)"/>
+  </g>
+
+  <rect x="2" y="2" width="376" height="52" rx="12"
+        fill="rgba(255,255,255,0.62)" stroke="rgba(255,255,255,0.95)" stroke-width="1.5"/>
+
+  <text x="24" y="32" class="eyebrow">&#127472;&#127479; INTRODUCTION</text>
+
+  <g class="btn">
+    <rect x="268" y="12" width="94" height="32" rx="16" fill="#5E5CE6"/>
+    <text x="315" y="32" text-anchor="middle" class="btn-label">PROFILE &#8594;</text>
+  </g>
+</svg>

@@ -1,8 +1,9 @@
 <h1 align="center">gunh0 (Gunho Park)</h1>
 
-**🇰🇷 Introduction (Profile): <https://gunh0.github.io/profile>**
-
-**[💼 Curriculum Vitae (CV)](https://github.com/gunh0/curriculum-vitae/blob/master/main/cv.pdf)**
+<p align="center">
+  <a href="https://gunh0.github.io/profile"><img src="./assets/link-introduction.svg" alt="🇰🇷 Introduction — Korean profile page"/></a>
+  <a href="https://github.com/gunh0/curriculum-vitae/blob/master/main/cv.pdf"><img src="./assets/link-cv.svg" alt="💼 Curriculum Vitae — open the PDF"/></a>
+</p>
 
 **I am committed to becoming an expert equipped with the powerful tool of <kbd>&nbsp;⚒️ Development&nbsp;</kbd> and the strategic blueprint of <kbd>&nbsp;🛡️ Cybersecurity&nbsp;</kbd>, seamlessly integrating both to create a robust defense against evolving threats. My primary focus lies in <kbd>&nbsp;📊 Data-driven Security&nbsp;</kbd>, where insights derived from data guide decision-making processes to enhance the overall security posture.**
 
