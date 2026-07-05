@@ -36,7 +36,7 @@
     <rect x="22" y="12" width="32" height="19" rx="6" fill="#FF375F" opacity="0.13"/>
     <text x="38" y="26" text-anchor="middle" class="num" fill="#FF375F">04</text>
     <text x="62" y="26" class="name">azure-security-hub</text>
-    <text x="384" y="27" text-anchor="end" class="star" fill="#FF375F">&#9733; 0</text>
+    <text x="384" y="27" text-anchor="end" class="star" fill="#FF375F">&#9733; 1</text>
     <text x="20" y="50" class="desc">CLI tool for inspecting and monitoring the security</text>
     <text x="20" y="66" class="desc">posture of Azure resources</text>
 
