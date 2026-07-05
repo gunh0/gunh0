@@ -21,6 +21,7 @@ blobs behind translucent rgba() panels instead. Per-tile entrance delays are
 baked into each SVG so the grid still rises in a stagger.
 """
 
+import hashlib
 import html
 import json
 import os
@@ -296,12 +297,19 @@ def build_tile_svg(
 """
 
 
+def content_hash(path: pathlib.Path) -> str:
+    """Short content hash used as a cache-busting query param, so a changed
+    SVG gets a new URL immediately instead of waiting out CDN/browser caches."""
+    return hashlib.md5(path.read_bytes()).hexdigest()[:8]
+
+
 def tile_grid(entries: list[tuple[str, str]], indent: str = "  ") -> list[str]:
     lines = ['<p align="center">']
     for name, tile_alt in entries:
+        v = content_hash(TILES_DIR / f"{name}.svg")
         lines.append(
             f'{indent}<a href="https://github.com/gunh0/{name}">'
-            f'<img src="./assets/featured/{name}.svg" width="49%" alt="{tile_alt}"/></a>'
+            f'<img src="./assets/featured/{name}.svg?v={v}" width="49%" alt="{tile_alt}"/></a>'
         )
     lines.append("</p>")
     return lines
@@ -316,7 +324,7 @@ def build_readme_section(
     alt = f"Featured Projects: {total} total — {summary}"
     parts = [
         '<p align="center">',
-        f'  <img src="./assets/featured-projects-stats.svg" alt="{alt}"/>',
+        f'  <img src="./assets/featured-projects-stats.svg?v={content_hash(STATS_SVG)}" alt="{alt}"/>',
         "</p>",
         "",
     ]
