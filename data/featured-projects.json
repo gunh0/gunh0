@@ -94,6 +94,10 @@
           "description": "Automated ML dataset serving using Docker containers on AWS"
         },
         {
+          "name": "gunh0.github.io",
+          "description": "Personal tech blog built with Next.js 16 — GitLab-inspired design with dark mode, deployed via SSG"
+        },
+        {
           "name": "merkle-tree",
           "description": "Merkle tree implementation in Go"
         }

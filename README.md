@@ -31,7 +31,7 @@
 
 <!-- FEATURED:START -->
 <p align="center">
-  <img src="./assets/featured-projects-stats.svg" alt="Featured Projects: 27 total — Security & DevSecOps 8, AI & LLM Engineering 3, Systems & Infrastructure 6, Foundations 1, Learning & Playgrounds 9"/>
+  <img src="./assets/featured-projects-stats.svg" alt="Featured Projects: 28 total — Security & DevSecOps 8, AI & LLM Engineering 3, Systems & Infrastructure 7, Foundations 1, Learning & Playgrounds 9"/>
 </p>
 
 <p align="center">
@@ -51,23 +51,24 @@
   <a href="https://github.com/gunh0/windows-system-programming"><img src="./assets/featured/windows-system-programming.svg" width="49%" alt="14 windows-system-programming"/></a>
   <a href="https://github.com/gunh0/docker-hadoop-cluster"><img src="./assets/featured/docker-hadoop-cluster.svg" width="49%" alt="15 docker-hadoop-cluster"/></a>
   <a href="https://github.com/gunh0/ml-dataset-automation-aws"><img src="./assets/featured/ml-dataset-automation-aws.svg" width="49%" alt="16 ml-dataset-automation-aws"/></a>
-  <a href="https://github.com/gunh0/merkle-tree"><img src="./assets/featured/merkle-tree.svg" width="49%" alt="17 merkle-tree"/></a>
-  <a href="https://github.com/gunh0/algorithms"><img src="./assets/featured/algorithms.svg" width="49%" alt="18 algorithms"/></a>
+  <a href="https://github.com/gunh0/gunh0.github.io"><img src="./assets/featured/gunh0.github.io.svg" width="49%" alt="17 gunh0.github.io"/></a>
+  <a href="https://github.com/gunh0/merkle-tree"><img src="./assets/featured/merkle-tree.svg" width="49%" alt="18 merkle-tree"/></a>
+  <a href="https://github.com/gunh0/algorithms"><img src="./assets/featured/algorithms.svg" width="49%" alt="19 algorithms"/></a>
 </p>
 
 <details>
 <summary><b>🧪 Learning & Playgrounds (9)</b> — click to expand</summary>
 <br/>
 <p align="center">
-  <a href="https://github.com/gunh0/tensorflow-playground"><img src="./assets/featured/tensorflow-playground.svg" width="49%" alt="19 tensorflow-playground"/></a>
-  <a href="https://github.com/gunh0/java-atoz"><img src="./assets/featured/java-atoz.svg" width="49%" alt="20 java-atoz"/></a>
-  <a href="https://github.com/gunh0/django-atoz"><img src="./assets/featured/django-atoz.svg" width="49%" alt="21 django-atoz"/></a>
-  <a href="https://github.com/gunh0/cpp-atoz"><img src="./assets/featured/cpp-atoz.svg" width="49%" alt="22 cpp-atoz"/></a>
-  <a href="https://github.com/gunh0/keras-playground"><img src="./assets/featured/keras-playground.svg" width="49%" alt="23 keras-playground"/></a>
-  <a href="https://github.com/gunh0/javascript-atoz"><img src="./assets/featured/javascript-atoz.svg" width="49%" alt="24 javascript-atoz"/></a>
-  <a href="https://github.com/gunh0/typescript-atoz"><img src="./assets/featured/typescript-atoz.svg" width="49%" alt="25 typescript-atoz"/></a>
-  <a href="https://github.com/gunh0/code-generation"><img src="./assets/featured/code-generation.svg" width="49%" alt="26 code-generation"/></a>
-  <a href="https://github.com/gunh0/centos7-openssh-testbed"><img src="./assets/featured/centos7-openssh-testbed.svg" width="49%" alt="27 centos7-openssh-testbed"/></a>
+  <a href="https://github.com/gunh0/tensorflow-playground"><img src="./assets/featured/tensorflow-playground.svg" width="49%" alt="20 tensorflow-playground"/></a>
+  <a href="https://github.com/gunh0/java-atoz"><img src="./assets/featured/java-atoz.svg" width="49%" alt="21 java-atoz"/></a>
+  <a href="https://github.com/gunh0/django-atoz"><img src="./assets/featured/django-atoz.svg" width="49%" alt="22 django-atoz"/></a>
+  <a href="https://github.com/gunh0/cpp-atoz"><img src="./assets/featured/cpp-atoz.svg" width="49%" alt="23 cpp-atoz"/></a>
+  <a href="https://github.com/gunh0/keras-playground"><img src="./assets/featured/keras-playground.svg" width="49%" alt="24 keras-playground"/></a>
+  <a href="https://github.com/gunh0/javascript-atoz"><img src="./assets/featured/javascript-atoz.svg" width="49%" alt="25 javascript-atoz"/></a>
+  <a href="https://github.com/gunh0/typescript-atoz"><img src="./assets/featured/typescript-atoz.svg" width="49%" alt="26 typescript-atoz"/></a>
+  <a href="https://github.com/gunh0/code-generation"><img src="./assets/featured/code-generation.svg" width="49%" alt="27 code-generation"/></a>
+  <a href="https://github.com/gunh0/centos7-openssh-testbed"><img src="./assets/featured/centos7-openssh-testbed.svg" width="49%" alt="28 centos7-openssh-testbed"/></a>
 </p>
 </details>
 <!-- FEATURED:END -->

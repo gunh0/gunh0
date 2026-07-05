@@ -1,4 +1,4 @@
-<svg width="400" height="84" viewBox="0 0 400 84" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="27 centos7-openssh-testbed [LEARNING] — Testing environment for OpenSSH version migration using Docker containers">
+<svg width="400" height="84" viewBox="0 0 400 84" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="28 centos7-openssh-testbed [LEARNING] — Testing environment for OpenSSH version migration using Docker containers">
   <style>
     text {
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -10,7 +10,7 @@
     .desc { font-size: 11px; fill: #6e7781; }
     .tag { font-size: 9px; font-weight: 700; letter-spacing: 1px; }
     .blob { animation: drift 18s ease-in-out infinite alternate; }
-    .tile { animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) 1.40s backwards; }
+    .tile { animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) 1.45s backwards; }
     @keyframes drift { to { transform: translate(-30px, 18px); } }
     @keyframes rise { from { opacity: 0; transform: translateY(12px); } }
   </style>
@@ -34,7 +34,7 @@
     <rect x="8" y="10" width="5" height="64" rx="2.5" fill="#BF5AF2" opacity="0.85"/>
 
     <rect x="22" y="12" width="32" height="19" rx="6" fill="#BF5AF2" opacity="0.13"/>
-    <text x="38" y="26" text-anchor="middle" class="num" fill="#BF5AF2">27</text>
+    <text x="38" y="26" text-anchor="middle" class="num" fill="#BF5AF2">28</text>
     <text x="62" y="26" class="name">centos7-openssh-testbed</text>
     <text x="384" y="27" text-anchor="end" class="star" fill="#BF5AF2">&#9733; 1</text>
     <text x="20" y="50" class="desc">Testing environment for OpenSSH version migration using</text>
