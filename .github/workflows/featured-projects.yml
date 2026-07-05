@@ -6,6 +6,8 @@ on:
     paths:
       - "data/featured-projects.json"
       - "scripts/generate_featured_projects.py"
+  schedule:
+    - cron: "0 0 * * 1" # weekly star count refresh
   workflow_dispatch:
 
 jobs:
@@ -20,14 +22,16 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Regenerate README section and stats SVG
+      - name: Regenerate README section and SVG cards
         run: python scripts/generate_featured_projects.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md assets/featured-projects-stats.svg
+          git add README.md assets/featured-projects-stats.svg assets/featured-projects-list.svg
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "chore: regenerate featured projects"
           git push

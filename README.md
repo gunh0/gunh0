@@ -27,7 +27,17 @@
   <img src="./assets/featured-projects-stats.svg" alt="Featured Projects: 18 total — Security & DevSecOps 8, AI & LLM Engineering 3, Systems & Infrastructure 6, Foundations 1"/>
 </p>
 
-### 🔐 Security & DevSecOps ![8 repos](https://img.shields.io/badge/-8%2F18-DC143C?style=flat-square)
+<p align="center">
+  <a href="https://github.com/gunh0?tab=repositories">
+    <img src="./assets/featured-projects-list.svg" alt="Project index: 18 featured repositories"/>
+  </a>
+</p>
+
+<details>
+<summary><b>&#128209; Text version with clickable links</b></summary>
+<br/>
+
+#### 🔐 Security & DevSecOps ![8 repos](https://img.shields.io/badge/-8%2F18-DC143C?style=flat-square)
 
 <kbd>&nbsp;01&nbsp;</kbd>&ensp;<a href="https://github.com/gunh0/kr-vulhub"><b>kr-vulhub</b></a>&ensp;<img src="https://img.shields.io/github/stars/gunh0/kr-vulhub?style=flat-square&label=%E2%98%85&color=DC143C" alt="GitHub stars" align="top"/>
 <br/>
@@ -61,7 +71,7 @@
 <br/>
 <sub>&emsp;&emsp;CNN model classifying grayscale binary images as ransomware or benign</sub>
 
-### 🤖 AI & LLM Engineering ![3 repos](https://img.shields.io/badge/-3%2F18-10A37F?style=flat-square)
+#### 🤖 AI & LLM Engineering ![3 repos](https://img.shields.io/badge/-3%2F18-10A37F?style=flat-square)
 
 <kbd>&nbsp;09&nbsp;</kbd>&ensp;<a href="https://github.com/gunh0/kr-mcp-from-scratch"><b>kr-mcp-from-scratch</b></a>&ensp;<img src="https://img.shields.io/github/stars/gunh0/kr-mcp-from-scratch?style=flat-square&label=%E2%98%85&color=10A37F" alt="GitHub stars" align="top"/>
 <br/>
@@ -75,7 +85,7 @@
 <br/>
 <sub>&emsp;&emsp;Tabular Q-learning walkthroughs with Gymnasium, from a visual route planner to Taxi-v3</sub>
 
-### ⚙️ Systems & Infrastructure ![6 repos](https://img.shields.io/badge/-6%2F18-FF8C00?style=flat-square)
+#### ⚙️ Systems & Infrastructure ![6 repos](https://img.shields.io/badge/-6%2F18-FF8C00?style=flat-square)
 
 <kbd>&nbsp;12&nbsp;</kbd>&ensp;<a href="https://github.com/gunh0/pcap-tracking"><b>pcap-tracking</b></a>&ensp;<img src="https://img.shields.io/github/stars/gunh0/pcap-tracking?style=flat-square&label=%E2%98%85&color=FF8C00" alt="GitHub stars" align="top"/>
 <br/>
@@ -101,11 +111,13 @@
 <br/>
 <sub>&emsp;&emsp;Merkle tree implementation in Go</sub>
 
-### 📚 Foundations ![1 repo](https://img.shields.io/badge/-1%2F18-2F81F7?style=flat-square)
+#### 📚 Foundations ![1 repo](https://img.shields.io/badge/-1%2F18-2F81F7?style=flat-square)
 
 <kbd>&nbsp;18&nbsp;</kbd>&ensp;<a href="https://github.com/gunh0/algorithms"><b>algorithms</b></a>&ensp;<img src="https://img.shields.io/github/stars/gunh0/algorithms?style=flat-square&label=%E2%98%85&color=2F81F7" alt="GitHub stars" align="top"/>
 <br/>
 <sub>&emsp;&emsp;Solutions for algorithm problems in C/C++</sub>
+
+</details>
 <!-- FEATURED:END -->
 
 <br/>
