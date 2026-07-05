@@ -1,0 +1,45 @@
+<svg width="400" height="84" viewBox="0 0 400 84" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="23 keras-playground [LEARNING] — Exploring Keras, a powerful deep learning library">
+  <style>
+    text {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      fill: #1f2328;
+    }
+    .num { font-size: 11px; font-weight: 700; font-family: "SFMono-Regular", Consolas, Menlo, monospace; }
+    .name { font-size: 13.5px; font-weight: 700; }
+    .star { font-size: 11.5px; font-weight: 700; }
+    .desc { font-size: 11px; fill: #6e7781; }
+    .tag { font-size: 9px; font-weight: 700; letter-spacing: 1px; }
+    .blob { animation: drift 18s ease-in-out infinite alternate; }
+    .tile { animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) 1.20s backwards; }
+    @keyframes drift { to { transform: translate(-30px, 18px); } }
+    @keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+  </style>
+
+  <defs>
+    <filter id="t-blur" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <clipPath id="t-clip">
+      <rect width="400" height="84" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <g class="tile">
+    <rect width="400" height="84" rx="14" fill="#f2f4f8"/>
+    <g clip-path="url(#t-clip)">
+      <circle class="blob" cx="340" cy="6" r="76" fill="#BF5AF2" opacity="0.24" filter="url(#t-blur)"/>
+    </g>
+    <rect x="2" y="2" width="396" height="80" rx="12"
+          fill="rgba(255,255,255,0.62)" stroke="rgba(255,255,255,0.95)" stroke-width="1.5"/>
+    <rect x="8" y="10" width="5" height="64" rx="2.5" fill="#BF5AF2" opacity="0.85"/>
+
+    <rect x="22" y="12" width="32" height="19" rx="6" fill="#BF5AF2" opacity="0.13"/>
+    <text x="38" y="26" text-anchor="middle" class="num" fill="#BF5AF2">23</text>
+    <text x="62" y="26" class="name">keras-playground</text>
+    <text x="384" y="27" text-anchor="end" class="star" fill="#BF5AF2">&#9733; 0</text>
+    <text x="20" y="50" class="desc">Exploring Keras, a powerful deep learning library</text>
+
+    <rect x="315" y="54" width="69" height="17" rx="8.5" fill="#BF5AF2" opacity="0.13"/>
+    <text x="350" y="66" text-anchor="middle" class="tag" fill="#BF5AF2">LEARNING</text>
+  </g>
+</svg>

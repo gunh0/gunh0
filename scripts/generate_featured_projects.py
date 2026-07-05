@@ -296,8 +296,19 @@ def build_tile_svg(
 """
 
 
+def tile_grid(entries: list[tuple[str, str]], indent: str = "  ") -> list[str]:
+    lines = ['<p align="center">']
+    for name, tile_alt in entries:
+        lines.append(
+            f'{indent}<a href="https://github.com/gunh0/{name}">'
+            f'<img src="./assets/featured/{name}.svg" width="49%" alt="{tile_alt}"/></a>'
+        )
+    lines.append("</p>")
+    return lines
+
+
 def build_readme_section(
-    categories: list[dict], total: int, tiles: list[tuple[str, str]]
+    categories: list[dict], total: int, numbers: dict[str, int]
 ) -> str:
     summary = ", ".join(
         f"{plain_title(c['title'])} {len(c['projects'])}" for c in categories
@@ -308,14 +319,33 @@ def build_readme_section(
         f'  <img src="./assets/featured-projects-stats.svg" alt="{alt}"/>',
         "</p>",
         "",
-        '<p align="center">',
     ]
-    for name, tile_alt in tiles:
+
+    def entries(cat: dict) -> list[tuple[str, str]]:
+        return [
+            (p["name"], f"{numbers[p['name']]:02d} {p['name']}")
+            for p in cat["projects"]
+        ]
+
+    # visible categories share one flat grid; collapsed ones fold below it
+    visible: list[tuple[str, str]] = []
+    for cat in categories:
+        if not cat.get("collapsed"):
+            visible.extend(entries(cat))
+    parts.extend(tile_grid(visible))
+
+    for cat in categories:
+        if not cat.get("collapsed"):
+            continue
+        count = len(cat["projects"])
+        parts.append("")
+        parts.append("<details>")
         parts.append(
-            f'  <a href="https://github.com/gunh0/{name}">'
-            f'<img src="./assets/featured/{name}.svg" width="49%" alt="{tile_alt}"/></a>'
+            f"<summary><b>{cat['title']} ({count})</b> — click to expand</summary>"
         )
-    parts.append("</p>")
+        parts.append("<br/>")
+        parts.extend(tile_grid(entries(cat)))
+        parts.append("</details>")
     return "\n".join(parts)
 
 
@@ -334,7 +364,7 @@ def main() -> None:
     STATS_SVG.write_text(build_stats_svg(categories, total), encoding="utf-8")
 
     TILES_DIR.mkdir(parents=True, exist_ok=True)
-    tiles: list[tuple[str, str]] = []
+    numbers: dict[str, int] = {}
     number = 0
     for cat in categories:
         accent = cat.get("accent", cat["svg_color"])
@@ -342,19 +372,18 @@ def main() -> None:
         for project in cat["projects"]:
             number += 1
             name = project["name"]
+            numbers[name] = number
             tile = build_tile_svg(
                 number, name, project["description"], accent, tag, stars.get(name)
             )
             (TILES_DIR / f"{name}.svg").write_text(tile, encoding="utf-8")
-            tiles.append((name, f"{number:02d} {name}"))
 
-    current = {name for name, _ in tiles}
     for stale in TILES_DIR.glob("*.svg"):
-        if stale.stem not in current:
+        if stale.stem not in numbers:
             stale.unlink()
 
     readme = README.read_text(encoding="utf-8")
-    section = build_readme_section(categories, total, tiles)
+    section = build_readme_section(categories, total, numbers)
     updated, replaced = re.subn(
         r"(<!-- FEATURED:START -->\n).*?(\n<!-- FEATURED:END -->)",
         lambda m: m.group(1) + section + m.group(2),

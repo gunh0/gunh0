@@ -115,6 +115,54 @@
       ],
       "accent": "#0A84FF",
       "tag": "FOUNDATIONS"
+    },
+    {
+      "id": "learning",
+      "title": "🧪 Learning & Playgrounds",
+      "svg_label": "🧪 LEARNING",
+      "badge_color": "BF5AF2",
+      "svg_color": "#8250df",
+      "accent": "#BF5AF2",
+      "tag": "LEARNING",
+      "collapsed": true,
+      "projects": [
+        {
+          "name": "tensorflow-playground",
+          "description": "Hands-on TensorFlow experiments and notebooks"
+        },
+        {
+          "name": "java-atoz",
+          "description": "Java from fundamentals to advanced topics with runnable examples"
+        },
+        {
+          "name": "django-atoz",
+          "description": "Getting started with Django through example projects"
+        },
+        {
+          "name": "cpp-atoz",
+          "description": "Exploring the depths of C++ with practical examples"
+        },
+        {
+          "name": "keras-playground",
+          "description": "Exploring Keras, a powerful deep learning library"
+        },
+        {
+          "name": "javascript-atoz",
+          "description": "JavaScript basics to advanced, including jQuery and Node.js"
+        },
+        {
+          "name": "typescript-atoz",
+          "description": "TypeScript language walkthrough from basics to advanced patterns"
+        },
+        {
+          "name": "code-generation",
+          "description": "Testbed for code generation experiments"
+        },
+        {
+          "name": "centos7-openssh-testbed",
+          "description": "Testing environment for OpenSSH version migration using Docker containers"
+        }
+      ]
     }
   ]
 }
