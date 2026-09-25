@@ -32,6 +32,10 @@
           "description": "Automated security auditing and hardening toolkit for multiple operating systems"
         },
         {
+          "name": "security-compliance-docs-collector",
+          "description": "Go collector and web viewer for CIS Benchmarks and compliance frameworks (ISO 27001, KISA ISMS-P, NIST, SOC 2) across 7 cloud platforms, tracking upstream revisions"
+        },
+        {
           "name": "tor-network-analyzer",
           "description": "Docker-based analyzer for Tor hidden services with a real-time web dashboard"
         },
