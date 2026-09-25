@@ -46,6 +46,10 @@
         {
           "name": "malware-image-classification",
           "description": "CNN model classifying grayscale binary images as ransomware or benign"
+        },
+        {
+          "name": "whitebox-cryptanalysis",
+          "description": "Overview of key-extraction attack models (black-, gray- and white-box) and white-box cryptography as a software alternative to HSMs, with C examples"
         }
       ],
       "accent": "#FF375F",
