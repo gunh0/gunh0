@@ -142,6 +142,10 @@
         {
           "name": "algorithms",
           "description": "Solutions for algorithm problems in C/C++"
+        },
+        {
+          "name": "hufs-fall-2019-computer-programming",
+          "description": "Lab slides and 82 C/C++ examples I taught as a lab TA for HUFS Computer Programming (Fall 2019), from C review to C++ classes, operator overloading and virtual functions"
         }
       ],
       "accent": "#0A84FF",
