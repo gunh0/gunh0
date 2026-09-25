@@ -27,19 +27,19 @@
   <g class="tile">
     <rect width="400" height="84" rx="14" fill="#f2f4f8"/>
     <g clip-path="url(#t-clip)">
-      <circle class="blob" cx="340" cy="6" r="76" fill="#0A84FF" opacity="0.24" filter="url(#t-blur)"/>
+      <circle class="blob" cx="340" cy="6" r="76" fill="#0A6FE0" opacity="0.24" filter="url(#t-blur)"/>
     </g>
     <rect x="2" y="2" width="396" height="80" rx="12"
           fill="rgba(255,255,255,0.62)" stroke="rgba(255,255,255,0.95)" stroke-width="1.5"/>
-    <rect x="8" y="10" width="5" height="64" rx="2.5" fill="#0A84FF" opacity="0.85"/>
+    <rect x="8" y="10" width="5" height="64" rx="2.5" fill="#0A6FE0" opacity="0.85"/>
 
-    <rect x="22" y="12" width="32" height="19" rx="6" fill="#0A84FF" opacity="0.13"/>
-    <text x="38" y="26" text-anchor="middle" class="num" fill="#0A84FF">22</text>
+    <rect x="22" y="12" width="32" height="19" rx="6" fill="#0A6FE0" opacity="0.13"/>
+    <text x="38" y="26" text-anchor="middle" class="num" fill="#0A6FE0">22</text>
     <text x="62" y="26" class="name">algorithms</text>
-    <text x="384" y="27" text-anchor="end" class="star" fill="#0A84FF">&#9733; 2</text>
+    <text x="384" y="27" text-anchor="end" class="star" fill="#0A6FE0">&#9733; 2</text>
     <text x="20" y="50" class="desc">Solutions for algorithm problems in C/C++</text>
 
-    <rect x="295" y="54" width="89" height="17" rx="8.5" fill="#0A84FF" opacity="0.13"/>
-    <text x="340" y="66" text-anchor="middle" class="tag" fill="#0A84FF">FOUNDATIONS</text>
+    <rect x="295" y="54" width="89" height="17" rx="8.5" fill="#0A6FE0" opacity="0.13"/>
+    <text x="340" y="66" text-anchor="middle" class="tag" fill="#0A6FE0">FOUNDATIONS</text>
   </g>
 </svg>

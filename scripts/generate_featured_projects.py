@@ -157,54 +157,107 @@ GLASS_CSS = f"""    text {{
 
 
 def build_stats_svg(categories: list[dict], total: int) -> str:
+    """Donut chart of projects per category with a legend.
+
+    GitHub shows README images through <img>, where SVGs get no pointer events,
+    so the "hover" there is simulated: after the slices draw in, each one pops
+    out in turn while its legend row lights up. Opened on its own, the SVG also
+    reacts to real hover (slice or legend row) and shows a tooltip per slice.
+    """
+    import math
+
     summary = ", ".join(
         f"{plain_title(c['title'])} {len(c['projects'])}" for c in categories
     )
     aria = f"Featured Projects: {total} total — {summary}"
     n = len(categories)
-    height = 84 + 39 * n + 14
+    row_h = 30
+    legend_top = 88
+    height = max(legend_top + row_h * n + 26, 300)
     accents = [c.get("accent", c["svg_color"]) for c in categories]
     head, sheen = glass_scaffold(height, accents, "st")
 
-    delay_css = "\n".join(
-        f"    .d{i + 1} {{ animation-delay: {0.2 + 0.2 * i:.2f}s; }}" for i in range(n)
+    cx, cy, r, sw, pop = 190, (height + 40) // 2, 84, 28, 38
+    circ = 2 * math.pi * r
+    gap = 3.0
+    step = 1.8                      # seconds each slice stays in the spotlight
+    period = step * n
+    intro = 0.15 + 0.12 * n + 0.8   # spotlight starts after every slice has drawn
+    share = 100 / n                 # percent of the period per slice
+    spot_kf = (
+        f"0% {{ stroke-width: {sw}px; }} "
+        f"{share * 0.2:.2f}% {{ stroke-width: {pop}px; }} "
+        f"{share * 0.8:.2f}% {{ stroke-width: {pop}px; }} "
+        f"{share:.2f}% {{ stroke-width: {sw}px; }} "
+        f"100% {{ stroke-width: {sw}px; }}"
     )
-    fade_css = "\n".join(
-        f"    .f{i + 1} {{ animation-delay: {0.9 + 0.2 * i:.1f}s; }}" for i in range(n)
+    row_kf = (
+        f"0% {{ opacity: 0; }} {share * 0.2:.2f}% {{ opacity: 1; }} "
+        f"{share * 0.8:.2f}% {{ opacity: 1; }} {share:.2f}% {{ opacity: 0; }} 100% {{ opacity: 0; }}"
     )
 
-    rows = []
+    slices, rows, per_css = [], [], []
+    offset = 0.0
     for i, cat in enumerate(categories):
         count = len(cat["projects"])
         accent = accents[i]
-        bar_y = 84 + 39 * i
-        text_y = bar_y + 11
-        bar_w = round(380 * count / total)
-        rows.append(
-            f"""  <!-- {plain_title(cat['title'])} {count}/{total} -->
-  <text x="48" y="{text_y}" class="label">{esc(cat['svg_label'])}</text>
-  <rect x="340" y="{bar_y}" width="380" height="12" rx="6" fill="rgba(31,35,40,0.07)"/>
-  <rect x="340" y="{bar_y}" width="{bar_w}" height="12" rx="6" fill="{accent}" class="bar d{i + 1}"/>
-  <text x="772" y="{text_y}" text-anchor="end" class="count fade f{i + 1}" fill="{accent}">{count}</text>"""
+        name = plain_title(cat["title"])
+        pct = round(100 * count / total)
+        length = max(circ * count / total - gap, 0.5)
+        draw_delay = 0.15 + 0.12 * i
+        spot_delay = intro + step * i
+        slices.append(
+            f"""    <circle class="slice s{i + 1}" cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{accent}"
+            stroke-dasharray="{length:.2f} {circ:.2f}" stroke-dashoffset="{-offset:.2f}">
+      <title>{esc(name)}: {count} of {total} ({pct}%)</title>
+    </circle>"""
         )
+        y = legend_top + row_h * i
+        rows.append(
+            f"""  <!-- {esc(name)} {count}/{total} -->
+  <g class="row r{i + 1}">
+    <rect class="pill" x="376" y="{y - 13}" width="404" height="26" rx="13" fill="{accent}" fill-opacity="0.12"/>
+    <circle cx="396" cy="{y}" r="6" fill="{accent}"/>
+    <text x="412" y="{y + 4.5}" class="label">{esc(cat['svg_label'])}</text>
+    <text x="712" y="{y + 4.5}" text-anchor="end" class="count">{count}</text>
+    <text x="768" y="{y + 4.5}" text-anchor="end" class="pct">{pct}%</text>
+  </g>"""
+        )
+        per_css.append(
+            f"    .s{i + 1} {{ animation: draw{i + 1} 0.8s cubic-bezier(0.22, 1, 0.36, 1) {draw_delay:.2f}s backwards, "
+            f"spot {period:.1f}s ease-in-out {spot_delay:.2f}s infinite; }}\n"
+            f"    .r{i + 1} .pill {{ animation: rowspot {period:.1f}s ease-in-out {spot_delay:.2f}s infinite; }}\n"
+            f"    @keyframes draw{i + 1} {{ from {{ stroke-dasharray: 0 {circ:.2f}; }} }}\n"
+            f"    svg:has(.r{i + 1}:hover) .s{i + 1}, .s{i + 1}:hover {{ stroke-width: {pop}px; opacity: 1; }}\n"
+            f"    svg:has(.s{i + 1}:hover) .r{i + 1} .pill, .r{i + 1}:hover .pill {{ opacity: 1; }}"
+        )
+        offset += circ * count / total
+
+    slices_svg = "\n".join(slices)
     rows_svg = "\n\n".join(rows)
+    per_css_svg = "\n".join(per_css)
 
     return f"""<svg width="{WIDTH}" height="{height}" viewBox="0 0 {WIDTH} {height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{esc(aria)}">
   <style>
 {GLASS_CSS}
-    .label {{ font-size: 13.5px; font-weight: 600; }}
-    .count {{ font-size: 13.5px; font-weight: 700; }}
+    .label {{ font-size: 13px; font-weight: 600; }}
+    .count {{ font-size: 14px; font-weight: 700; }}
+    .pct {{ font-size: 12.5px; fill: #6e7781; }}
     .total {{ font-size: 15px; font-weight: 700; }}
-    .bar {{
-      transform-box: fill-box;
-      transform-origin: left;
-      animation: grow 1.1s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    .hero {{ font-size: 40px; font-weight: 700; letter-spacing: -1px; }}
+    .hero-sub {{ font-size: 11px; font-weight: 600; letter-spacing: 1.5px; fill: #6e7781; }}
+    .slice {{ stroke-width: {sw}px; transition: stroke-width 0.25s ease, opacity 0.25s ease; cursor: pointer; }}
+    .pill {{ opacity: 0; transition: opacity 0.25s ease; }}
+    .row {{ cursor: pointer; }}
+    @keyframes spot {{ {spot_kf} }}
+    @keyframes rowspot {{ {row_kf} }}
+{per_css_svg}
+    /* real hover (SVG opened directly): stop the auto spotlight, dim the rest */
+    svg:hover .slice, svg:hover .pill {{ animation-name: none; }}
+    svg:has(.slice:hover) .slice:not(:hover), svg:has(.row:hover) .slice {{ opacity: 0.35; }}
+    @media (prefers-reduced-motion: reduce) {{
+      .slice, .pill, .blob, .sheen, .cursor {{ animation: none !important; }}
     }}
-{delay_css}
-    .fade {{ animation: fadein 0.5s ease-out backwards; }}
-{fade_css}
-    @keyframes grow {{ from {{ transform: scaleX(0); }} }}
-    @keyframes fadein {{ from {{ opacity: 0; }} }}
   </style>
 
 {head}
@@ -213,6 +266,15 @@ def build_stats_svg(categories: list[dict], total: int) -> str:
   <text x="48" y="54" class="header">Featured Projects<tspan class="cursor" fill="#6e7781">_</tspan></text>
   <text x="772" y="54" text-anchor="end" class="total"><tspan class="dim">TOTAL </tspan>{total}</text>
 
+  <!-- donut: slices start at 12 o'clock and run clockwise in legend order -->
+  <circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="rgba(31,35,40,0.06)" stroke-width="{sw}"/>
+  <g transform="rotate(-90 {cx} {cy})">
+{slices_svg}
+  </g>
+  <text x="{cx}" y="{cy + 8}" text-anchor="middle" class="hero">{total}</text>
+  <text x="{cx}" y="{cy + 28}" text-anchor="middle" class="hero-sub">PROJECTS</text>
+
+  <!-- legend -->
 {rows_svg}
 
 {sheen}

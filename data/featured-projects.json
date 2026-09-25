@@ -4,7 +4,7 @@
       "id": "security",
       "title": "🔐 Security & DevSecOps",
       "svg_label": "🔒 SECURITY & DEVSECOPS",
-      "badge_color": "DC143C",
+      "badge_color": "E0305A",
       "svg_color": "#cf222e",
       "projects": [
         {
@@ -52,7 +52,7 @@
           "description": "Overview of key-extraction attack models (black-, gray- and white-box) and white-box cryptography as a software alternative to HSMs, with C examples"
         }
       ],
-      "accent": "#FF375F",
+      "accent": "#E0305A",
       "tag": "SECURITY",
       "collapsed": false
     },
@@ -60,7 +60,7 @@
       "id": "ai",
       "title": "🤖 AI & LLM Engineering",
       "svg_label": "🤖 AI & LLM",
-      "badge_color": "10A37F",
+      "badge_color": "28B24B",
       "svg_color": "#1a7f37",
       "projects": [
         {
@@ -76,7 +76,7 @@
           "description": "Tabular Q-learning walkthroughs with Gymnasium, from a visual route planner to Taxi-v3"
         }
       ],
-      "accent": "#30D158",
+      "accent": "#28B24B",
       "tag": "AI",
       "collapsed": true
     },
@@ -84,7 +84,7 @@
       "id": "systems",
       "title": "⚙️ Systems & Infrastructure",
       "svg_label": "⚙️ SYSTEMS & INFRA",
-      "badge_color": "FF8C00",
+      "badge_color": "E08600",
       "svg_color": "#bf8700",
       "projects": [
         {
@@ -112,7 +112,7 @@
           "description": "Merkle tree implementation in Go"
         }
       ],
-      "accent": "#FF9F0A",
+      "accent": "#E08600",
       "tag": "SYSTEMS",
       "collapsed": true
     },
@@ -120,9 +120,9 @@
       "id": "web",
       "title": "🌐 Web & Product",
       "svg_label": "🌐 WEB & PRODUCT",
-      "badge_color": "17A2B8",
+      "badge_color": "1A9DB8",
       "svg_color": "#0969da",
-      "accent": "#40C8E0",
+      "accent": "#1A9DB8",
       "tag": "WEB",
       "collapsed": true,
       "projects": [
@@ -136,7 +136,7 @@
       "id": "foundations",
       "title": "📚 Foundations",
       "svg_label": "📚 FOUNDATIONS",
-      "badge_color": "2F81F7",
+      "badge_color": "0A6FE0",
       "svg_color": "#0969da",
       "projects": [
         {
@@ -148,9 +148,33 @@
           "description": "Lab slides and 82 C/C++ examples I taught as a lab TA for HUFS Computer Programming (Fall 2019), from C review to C++ classes, operator overloading and virtual functions"
         }
       ],
-      "accent": "#0A84FF",
+      "accent": "#0A6FE0",
       "tag": "FOUNDATIONS",
       "collapsed": true
+    },
+    {
+      "id": "about",
+      "title": "📎 About Me",
+      "svg_label": "📎 ABOUT ME",
+      "badge_color": "E87BA4",
+      "svg_color": "#5e5ce6",
+      "accent": "#E87BA4",
+      "tag": "ABOUT",
+      "collapsed": true,
+      "projects": [
+        {
+          "name": "profile",
+          "description": "Korean introduction page (한국어 소개) deployed on GitHub Pages"
+        },
+        {
+          "name": "curriculum-vitae",
+          "description": "My CV written in LaTeX with the Awesome CV template, published as a PDF"
+        },
+        {
+          "name": "gunh0",
+          "description": "This profile, built as code: one JSON file generates the README and glass SVG tiles, refreshed weekly by GitHub Actions"
+        }
+      ]
     },
     {
       "id": "learning",
@@ -197,30 +221,6 @@
         {
           "name": "centos7-openssh-testbed",
           "description": "Testing environment for OpenSSH version migration using Docker containers"
-        }
-      ]
-    },
-    {
-      "id": "about",
-      "title": "📎 About Me",
-      "svg_label": "📎 ABOUT ME",
-      "badge_color": "5E5CE6",
-      "svg_color": "#5e5ce6",
-      "accent": "#5E5CE6",
-      "tag": "ABOUT",
-      "collapsed": true,
-      "projects": [
-        {
-          "name": "profile",
-          "description": "Korean introduction page (한국어 소개) deployed on GitHub Pages"
-        },
-        {
-          "name": "curriculum-vitae",
-          "description": "My CV written in LaTeX with the Awesome CV template, published as a PDF"
-        },
-        {
-          "name": "gunh0",
-          "description": "This profile, built as code: one JSON file generates the README and glass SVG tiles, refreshed weekly by GitHub Actions"
         }
       ]
     }

@@ -27,20 +27,20 @@
   <g class="tile">
     <rect width="400" height="84" rx="14" fill="#f2f4f8"/>
     <g clip-path="url(#t-clip)">
-      <circle class="blob" cx="340" cy="6" r="76" fill="#FF9F0A" opacity="0.24" filter="url(#t-blur)"/>
+      <circle class="blob" cx="340" cy="6" r="76" fill="#E08600" opacity="0.24" filter="url(#t-blur)"/>
     </g>
     <rect x="2" y="2" width="396" height="80" rx="12"
           fill="rgba(255,255,255,0.62)" stroke="rgba(255,255,255,0.95)" stroke-width="1.5"/>
-    <rect x="8" y="10" width="5" height="64" rx="2.5" fill="#FF9F0A" opacity="0.85"/>
+    <rect x="8" y="10" width="5" height="64" rx="2.5" fill="#E08600" opacity="0.85"/>
 
-    <rect x="22" y="12" width="32" height="19" rx="6" fill="#FF9F0A" opacity="0.13"/>
-    <text x="38" y="26" text-anchor="middle" class="num" fill="#FF9F0A">18</text>
+    <rect x="22" y="12" width="32" height="19" rx="6" fill="#E08600" opacity="0.13"/>
+    <text x="38" y="26" text-anchor="middle" class="num" fill="#E08600">18</text>
     <text x="62" y="26" class="name">docker-hadoop-cluster</text>
-    <text x="384" y="27" text-anchor="end" class="star" fill="#FF9F0A">&#9733; 1</text>
+    <text x="384" y="27" text-anchor="end" class="star" fill="#E08600">&#9733; 1</text>
     <text x="20" y="50" class="desc">Dockerized Hadoop cluster with HDFS and YARN for local</text>
     <text x="20" y="66" class="desc">development and testing</text>
 
-    <rect x="322" y="54" width="62" height="17" rx="8.5" fill="#FF9F0A" opacity="0.13"/>
-    <text x="353" y="66" text-anchor="middle" class="tag" fill="#FF9F0A">SYSTEMS</text>
+    <rect x="322" y="54" width="62" height="17" rx="8.5" fill="#E08600" opacity="0.13"/>
+    <text x="353" y="66" text-anchor="middle" class="tag" fill="#E08600">SYSTEMS</text>
   </g>
 </svg>
