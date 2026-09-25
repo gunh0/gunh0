@@ -31,7 +31,7 @@
 
 <!-- FEATURED:START -->
 <p align="center">
-  <img src="./assets/featured-projects-stats.svg?v=72f9026b" alt="Featured Projects: 32 total — Security & DevSecOps 11, AI & LLM Engineering 3, Systems & Infrastructure 6, Web & Product 1, Foundations 2, Learning & Playgrounds 9"/>
+  <img src="./assets/featured-projects-stats.svg?v=2958cc82" alt="Featured Projects: 35 total — Security & DevSecOps 11, AI & LLM Engineering 3, Systems & Infrastructure 6, Web & Product 1, Foundations 2, Learning & Playgrounds 9, About Me 3"/>
 </p>
 
 <details open>
@@ -105,6 +105,16 @@
   <a href="https://github.com/gunh0/typescript-atoz"><img src="./assets/featured/typescript-atoz.svg?v=26bbd2e8" width="49%" alt="30 typescript-atoz"/></a>
   <a href="https://github.com/gunh0/code-generation"><img src="./assets/featured/code-generation.svg?v=6c0bb025" width="49%" alt="31 code-generation"/></a>
   <a href="https://github.com/gunh0/centos7-openssh-testbed"><img src="./assets/featured/centos7-openssh-testbed.svg?v=1cfdf450" width="49%" alt="32 centos7-openssh-testbed"/></a>
+</p>
+</details>
+
+<details>
+<summary><b>📎 About Me (3)</b></summary>
+<br/>
+<p align="center">
+  <a href="https://github.com/gunh0/profile"><img src="./assets/featured/profile.svg?v=4c52e590" width="49%" alt="33 profile"/></a>
+  <a href="https://github.com/gunh0/curriculum-vitae"><img src="./assets/featured/curriculum-vitae.svg?v=2db833e0" width="49%" alt="34 curriculum-vitae"/></a>
+  <a href="https://github.com/gunh0/gunh0"><img src="./assets/featured/gunh0.svg?v=facd52ac" width="49%" alt="35 gunh0"/></a>
 </p>
 </details>
 <!-- FEATURED:END -->

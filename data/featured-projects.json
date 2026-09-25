@@ -199,6 +199,30 @@
           "description": "Testing environment for OpenSSH version migration using Docker containers"
         }
       ]
+    },
+    {
+      "id": "about",
+      "title": "📎 About Me",
+      "svg_label": "📎 ABOUT ME",
+      "badge_color": "5E5CE6",
+      "svg_color": "#5e5ce6",
+      "accent": "#5E5CE6",
+      "tag": "ABOUT",
+      "collapsed": true,
+      "projects": [
+        {
+          "name": "profile",
+          "description": "Korean introduction page (한국어 소개) deployed on GitHub Pages"
+        },
+        {
+          "name": "curriculum-vitae",
+          "description": "My CV written in LaTeX with the Awesome CV template, published as a PDF"
+        },
+        {
+          "name": "gunh0",
+          "description": "This profile, built as code: one JSON file generates the README and glass SVG tiles, refreshed weekly by GitHub Actions"
+        }
+      ]
     }
   ]
 }
