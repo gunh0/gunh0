@@ -36,6 +36,10 @@
           "description": "Go collector and web viewer for CIS Benchmarks and compliance frameworks (ISO 27001, KISA ISMS-P, NIST, SOC 2) across 7 cloud platforms, tracking upstream revisions"
         },
         {
+          "name": "ocsf-auth-normalizer",
+          "description": "Go CLI and web view that normalizes SSH and AWS console auth logs into OCSF, validates them against the official schema, and detects brute force across sources — verified on real CloudTrail logs"
+        },
+        {
           "name": "tor-network-analyzer",
           "description": "Docker-based analyzer for Tor hidden services with a real-time web dashboard"
         },

@@ -1,4 +1,4 @@
-<svg width="400" height="84" viewBox="0 0 400 84" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="09 tor-network-analyzer [SECURITY] — Docker-based analyzer for Tor hidden services with a real-time web dashboard">
+<svg width="400" height="84" viewBox="0 0 400 84" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="08 ocsf-auth-normalizer [SECURITY] — Go CLI and web view that normalizes SSH and AWS console auth logs into OCSF, validates them against the official schema, and detects brute force across sources — verified on real CloudTrail logs">
   <style>
     text {
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -10,7 +10,7 @@
     .desc { font-size: 11px; fill: #6e7781; }
     .tag { font-size: 9px; font-weight: 700; letter-spacing: 1px; }
     .blob { animation: drift 18s ease-in-out infinite alternate; }
-    .tile { animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.50s backwards; }
+    .tile { animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.45s backwards; }
     @keyframes drift { to { transform: translate(-30px, 18px); } }
     @keyframes rise { from { opacity: 0; transform: translateY(12px); } }
   </style>
@@ -34,11 +34,11 @@
     <rect x="8" y="10" width="5" height="64" rx="2.5" fill="#FF375F" opacity="0.85"/>
 
     <rect x="22" y="12" width="32" height="19" rx="6" fill="#FF375F" opacity="0.13"/>
-    <text x="38" y="26" text-anchor="middle" class="num" fill="#FF375F">09</text>
-    <text x="62" y="26" class="name">tor-network-analyzer</text>
-    <text x="384" y="27" text-anchor="end" class="star" fill="#FF375F">&#9733; 1</text>
-    <text x="20" y="50" class="desc">Docker-based analyzer for Tor hidden services with a</text>
-    <text x="20" y="66" class="desc">real-time web dashboard</text>
+    <text x="38" y="26" text-anchor="middle" class="num" fill="#FF375F">08</text>
+    <text x="62" y="26" class="name">ocsf-auth-normalizer</text>
+    <text x="384" y="27" text-anchor="end" class="star" fill="#FF375F">&#9733; 0</text>
+    <text x="20" y="50" class="desc">Go CLI and web view that normalizes SSH and AWS console</text>
+    <text x="20" y="66" class="desc">auth logs into OCSF, validates them…</text>
 
     <rect x="315" y="54" width="69" height="17" rx="8.5" fill="#FF375F" opacity="0.13"/>
     <text x="350" y="66" text-anchor="middle" class="tag" fill="#FF375F">SECURITY</text>
