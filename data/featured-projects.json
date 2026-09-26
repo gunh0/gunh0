@@ -129,6 +129,10 @@
         {
           "name": "gunh0.github.io",
           "description": "Personal tech blog built with Next.js 16 — GitLab-inspired design with dark mode, deployed via SSG"
+        },
+        {
+          "name": "kpmg-ideation-challenge",
+          "description": "US patent dashboard by topic that ranks prior art across topics, with figures and citations"
         }
       ]
     },

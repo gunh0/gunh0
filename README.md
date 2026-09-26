@@ -31,7 +31,7 @@
 
 <!-- FEATURED:START -->
 <p align="center">
-  <img src="./assets/featured-projects-stats.svg?v=bee6744e" alt="Featured Projects: 35 total — Security & DevSecOps 11, AI & LLM Engineering 3, Systems & Infrastructure 6, Web & Product 1, Foundations 2, About Me 3, Learning & Playgrounds 9"/>
+  <img src="./assets/featured-projects-stats.svg?v=6b8540c9" alt="Featured Projects: 36 total — Security & DevSecOps 11, AI & LLM Engineering 3, Systems & Infrastructure 6, Web & Product 2, Foundations 2, About Me 3, Learning & Playgrounds 9"/>
 </p>
 
 <details open>
@@ -76,10 +76,11 @@
 </details>
 
 <details>
-<summary><b>🌐 Web & Product (1)</b></summary>
+<summary><b>🌐 Web & Product (2)</b></summary>
 <br/>
 <p align="center">
   <a href="https://github.com/gunh0/gunh0.github.io"><img src="./assets/featured/gunh0.github.io.svg?v=ad699b2e" width="49%" alt="21 gunh0.github.io"/></a>
+  <a href="https://github.com/gunh0/kpmg-ideation-challenge"><img src="./assets/featured/kpmg-ideation-challenge.svg?v=a8b13888" width="49%" alt="22 kpmg-ideation-challenge"/></a>
 </p>
 </details>
 
@@ -87,8 +88,8 @@
 <summary><b>📚 Foundations (2)</b></summary>
 <br/>
 <p align="center">
-  <a href="https://github.com/gunh0/algorithms"><img src="./assets/featured/algorithms.svg?v=ba9109d0" width="49%" alt="22 algorithms"/></a>
-  <a href="https://github.com/gunh0/hufs-fall-2019-computer-programming"><img src="./assets/featured/hufs-fall-2019-computer-programming.svg?v=d1d8ae4a" width="49%" alt="23 hufs-fall-2019-computer-programming"/></a>
+  <a href="https://github.com/gunh0/algorithms"><img src="./assets/featured/algorithms.svg?v=047228ab" width="49%" alt="23 algorithms"/></a>
+  <a href="https://github.com/gunh0/hufs-fall-2019-computer-programming"><img src="./assets/featured/hufs-fall-2019-computer-programming.svg?v=e09a05a0" width="49%" alt="24 hufs-fall-2019-computer-programming"/></a>
 </p>
 </details>
 
@@ -96,9 +97,9 @@
 <summary><b>📎 About Me (3)</b></summary>
 <br/>
 <p align="center">
-  <a href="https://github.com/gunh0/profile"><img src="./assets/featured/profile.svg?v=e075c9b2" width="49%" alt="24 profile"/></a>
-  <a href="https://github.com/gunh0/curriculum-vitae"><img src="./assets/featured/curriculum-vitae.svg?v=0d172455" width="49%" alt="25 curriculum-vitae"/></a>
-  <a href="https://github.com/gunh0/gunh0"><img src="./assets/featured/gunh0.svg?v=a4a3e55a" width="49%" alt="26 gunh0"/></a>
+  <a href="https://github.com/gunh0/profile"><img src="./assets/featured/profile.svg?v=a427710b" width="49%" alt="25 profile"/></a>
+  <a href="https://github.com/gunh0/curriculum-vitae"><img src="./assets/featured/curriculum-vitae.svg?v=e415d830" width="49%" alt="26 curriculum-vitae"/></a>
+  <a href="https://github.com/gunh0/gunh0"><img src="./assets/featured/gunh0.svg?v=cde5e774" width="49%" alt="27 gunh0"/></a>
 </p>
 </details>
 
@@ -106,15 +107,15 @@
 <summary><b>🧪 Learning & Playgrounds (9)</b></summary>
 <br/>
 <p align="center">
-  <a href="https://github.com/gunh0/tensorflow-playground"><img src="./assets/featured/tensorflow-playground.svg?v=0ef9195b" width="49%" alt="27 tensorflow-playground"/></a>
-  <a href="https://github.com/gunh0/java-atoz"><img src="./assets/featured/java-atoz.svg?v=5d16d8a5" width="49%" alt="28 java-atoz"/></a>
-  <a href="https://github.com/gunh0/django-atoz"><img src="./assets/featured/django-atoz.svg?v=15a830d9" width="49%" alt="29 django-atoz"/></a>
-  <a href="https://github.com/gunh0/cpp-atoz"><img src="./assets/featured/cpp-atoz.svg?v=d7131b11" width="49%" alt="30 cpp-atoz"/></a>
-  <a href="https://github.com/gunh0/keras-playground"><img src="./assets/featured/keras-playground.svg?v=f3239a38" width="49%" alt="31 keras-playground"/></a>
-  <a href="https://github.com/gunh0/javascript-atoz"><img src="./assets/featured/javascript-atoz.svg?v=69c1f676" width="49%" alt="32 javascript-atoz"/></a>
-  <a href="https://github.com/gunh0/typescript-atoz"><img src="./assets/featured/typescript-atoz.svg?v=b3383b83" width="49%" alt="33 typescript-atoz"/></a>
-  <a href="https://github.com/gunh0/code-generation"><img src="./assets/featured/code-generation.svg?v=a33f16c8" width="49%" alt="34 code-generation"/></a>
-  <a href="https://github.com/gunh0/centos7-openssh-testbed"><img src="./assets/featured/centos7-openssh-testbed.svg?v=530b374a" width="49%" alt="35 centos7-openssh-testbed"/></a>
+  <a href="https://github.com/gunh0/tensorflow-playground"><img src="./assets/featured/tensorflow-playground.svg?v=6feebb8f" width="49%" alt="28 tensorflow-playground"/></a>
+  <a href="https://github.com/gunh0/java-atoz"><img src="./assets/featured/java-atoz.svg?v=44d474df" width="49%" alt="29 java-atoz"/></a>
+  <a href="https://github.com/gunh0/django-atoz"><img src="./assets/featured/django-atoz.svg?v=4a30754c" width="49%" alt="30 django-atoz"/></a>
+  <a href="https://github.com/gunh0/cpp-atoz"><img src="./assets/featured/cpp-atoz.svg?v=974ff439" width="49%" alt="31 cpp-atoz"/></a>
+  <a href="https://github.com/gunh0/keras-playground"><img src="./assets/featured/keras-playground.svg?v=427b29da" width="49%" alt="32 keras-playground"/></a>
+  <a href="https://github.com/gunh0/javascript-atoz"><img src="./assets/featured/javascript-atoz.svg?v=d2a5fa32" width="49%" alt="33 javascript-atoz"/></a>
+  <a href="https://github.com/gunh0/typescript-atoz"><img src="./assets/featured/typescript-atoz.svg?v=a7ce310f" width="49%" alt="34 typescript-atoz"/></a>
+  <a href="https://github.com/gunh0/code-generation"><img src="./assets/featured/code-generation.svg?v=c4cdc7ea" width="49%" alt="35 code-generation"/></a>
+  <a href="https://github.com/gunh0/centos7-openssh-testbed"><img src="./assets/featured/centos7-openssh-testbed.svg?v=59e2f294" width="49%" alt="36 centos7-openssh-testbed"/></a>
 </p>
 </details>
 <!-- FEATURED:END -->
