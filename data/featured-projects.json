@@ -50,6 +50,10 @@
         {
           "name": "whitebox-cryptanalysis",
           "description": "Overview of key-extraction attack models (black-, gray- and white-box) and white-box cryptography as a software alternative to HSMs, with C examples"
+        },
+        {
+          "name": "zizmor-slsa-report",
+          "description": "Before-and-after GitHub Actions security reports with zizmor safe fixes"
         }
       ],
       "accent": "#E0305A",
