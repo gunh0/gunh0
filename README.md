@@ -31,7 +31,7 @@
 
 <!-- FEATURED:START -->
 <p align="center">
-  <img src="./assets/featured-projects-stats.svg?v=afc66e95" alt="Featured Projects: 38 total — Security & DevSecOps 12, AI & LLM Engineering 3, Systems & Infrastructure 6, Web & Product 2, Foundations 2, About Me 3, Learning & Playgrounds 10"/>
+  <img src="./assets/featured-projects-stats.svg?v=089bc4bb" alt="Featured Projects: 39 total — Security & DevSecOps 12, AI & LLM Engineering 3, Systems & Infrastructure 6, Web & Product 2, Foundations 2, About Me 3, Learning & Playgrounds 11"/>
 </p>
 
 <details open>
@@ -105,19 +105,20 @@
 </details>
 
 <details>
-<summary><b>🧪 Learning & Playgrounds (10)</b></summary>
+<summary><b>🧪 Learning & Playgrounds (11)</b></summary>
 <br/>
 <p align="center">
   <a href="https://github.com/gunh0/tensorflow-playground"><img src="./assets/featured/tensorflow-playground.svg?v=9cc3c992" width="49%" alt="29 tensorflow-playground"/></a>
-  <a href="https://github.com/gunh0/java-atoz"><img src="./assets/featured/java-atoz.svg?v=f33c5613" width="49%" alt="30 java-atoz"/></a>
-  <a href="https://github.com/gunh0/django-atoz"><img src="./assets/featured/django-atoz.svg?v=a6c824aa" width="49%" alt="31 django-atoz"/></a>
-  <a href="https://github.com/gunh0/to-be-a-gopher"><img src="./assets/featured/to-be-a-gopher.svg?v=3a8d9f3d" width="49%" alt="32 to-be-a-gopher"/></a>
-  <a href="https://github.com/gunh0/cpp-atoz"><img src="./assets/featured/cpp-atoz.svg?v=1e486f63" width="49%" alt="33 cpp-atoz"/></a>
-  <a href="https://github.com/gunh0/keras-playground"><img src="./assets/featured/keras-playground.svg?v=6c98b9f5" width="49%" alt="34 keras-playground"/></a>
-  <a href="https://github.com/gunh0/javascript-atoz"><img src="./assets/featured/javascript-atoz.svg?v=71777bcb" width="49%" alt="35 javascript-atoz"/></a>
-  <a href="https://github.com/gunh0/typescript-atoz"><img src="./assets/featured/typescript-atoz.svg?v=17a3c50d" width="49%" alt="36 typescript-atoz"/></a>
-  <a href="https://github.com/gunh0/code-generation"><img src="./assets/featured/code-generation.svg?v=7f3150fa" width="49%" alt="37 code-generation"/></a>
-  <a href="https://github.com/gunh0/centos7-openssh-testbed"><img src="./assets/featured/centos7-openssh-testbed.svg?v=9c9a9d24" width="49%" alt="38 centos7-openssh-testbed"/></a>
+  <a href="https://github.com/gunh0/java-atoz"><img src="./assets/featured/java-atoz.svg?v=1fa927f7" width="49%" alt="30 java-atoz"/></a>
+  <a href="https://github.com/gunh0/kotlin-atoz"><img src="./assets/featured/kotlin-atoz.svg?v=dd6dff3d" width="49%" alt="31 kotlin-atoz"/></a>
+  <a href="https://github.com/gunh0/django-atoz"><img src="./assets/featured/django-atoz.svg?v=86d1fc78" width="49%" alt="32 django-atoz"/></a>
+  <a href="https://github.com/gunh0/to-be-a-gopher"><img src="./assets/featured/to-be-a-gopher.svg?v=e9dd2f13" width="49%" alt="33 to-be-a-gopher"/></a>
+  <a href="https://github.com/gunh0/cpp-atoz"><img src="./assets/featured/cpp-atoz.svg?v=a4ec97de" width="49%" alt="34 cpp-atoz"/></a>
+  <a href="https://github.com/gunh0/keras-playground"><img src="./assets/featured/keras-playground.svg?v=f81fce46" width="49%" alt="35 keras-playground"/></a>
+  <a href="https://github.com/gunh0/javascript-atoz"><img src="./assets/featured/javascript-atoz.svg?v=a5fb64f4" width="49%" alt="36 javascript-atoz"/></a>
+  <a href="https://github.com/gunh0/typescript-atoz"><img src="./assets/featured/typescript-atoz.svg?v=9259c4a7" width="49%" alt="37 typescript-atoz"/></a>
+  <a href="https://github.com/gunh0/code-generation"><img src="./assets/featured/code-generation.svg?v=36abcd61" width="49%" alt="38 code-generation"/></a>
+  <a href="https://github.com/gunh0/centos7-openssh-testbed"><img src="./assets/featured/centos7-openssh-testbed.svg?v=4eff60ea" width="49%" alt="39 centos7-openssh-testbed"/></a>
 </p>
 </details>
 <!-- FEATURED:END -->

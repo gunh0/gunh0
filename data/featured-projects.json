@@ -200,7 +200,11 @@
         },
         {
           "name": "java-atoz",
-          "description": "Java from fundamentals to advanced topics with runnable examples"
+          "description": "770+ single-file Java examples, Java 9 to 26, secure coding and crypto, CI-verified"
+        },
+        {
+          "name": "kotlin-atoz",
+          "description": "142 Kotlin examples with 519 tests: coroutines, Kotlin 2.4, secure coding"
         },
         {
           "name": "django-atoz",
