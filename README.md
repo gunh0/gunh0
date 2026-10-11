@@ -31,24 +31,24 @@
 
 <!-- FEATURED:START -->
 <p align="center">
-  <img src="./assets/featured-projects-stats.svg?v=6b8540c9" alt="Featured Projects: 36 total — Security & DevSecOps 11, AI & LLM Engineering 3, Systems & Infrastructure 6, Web & Product 2, Foundations 2, About Me 3, Learning & Playgrounds 9"/>
+  <img src="./assets/featured-projects-stats.svg?v=bbf6f5ae" alt="Featured Projects: 37 total — Security & DevSecOps 11, AI & LLM Engineering 3, Systems & Infrastructure 6, Web & Product 2, Foundations 2, About Me 3, Learning & Playgrounds 10"/>
 </p>
 
 <details open>
 <summary><b>🔐 Security & DevSecOps (11)</b></summary>
 <br/>
 <p align="center">
-  <a href="https://github.com/gunh0/kr-vulhub"><img src="./assets/featured/kr-vulhub.svg?v=27f1a2f9" width="49%" alt="01 kr-vulhub"/></a>
-  <a href="https://github.com/gunh0/whs-utils"><img src="./assets/featured/whs-utils.svg?v=cfc765bb" width="49%" alt="02 whs-utils"/></a>
+  <a href="https://github.com/gunh0/kr-vulhub"><img src="./assets/featured/kr-vulhub.svg?v=722a7f52" width="49%" alt="01 kr-vulhub"/></a>
+  <a href="https://github.com/gunh0/whs-utils"><img src="./assets/featured/whs-utils.svg?v=79dd592c" width="49%" alt="02 whs-utils"/></a>
   <a href="https://github.com/gunh0/aws-security-hub"><img src="./assets/featured/aws-security-hub.svg?v=2e52796b" width="49%" alt="03 aws-security-hub"/></a>
   <a href="https://github.com/gunh0/azure-security-hub"><img src="./assets/featured/azure-security-hub.svg?v=437c2647" width="49%" alt="04 azure-security-hub"/></a>
   <a href="https://github.com/gunh0/openstack-security-hub"><img src="./assets/featured/openstack-security-hub.svg?v=f0a0203f" width="49%" alt="05 openstack-security-hub"/></a>
   <a href="https://github.com/gunh0/os-security-hub"><img src="./assets/featured/os-security-hub.svg?v=a4277098" width="49%" alt="06 os-security-hub"/></a>
   <a href="https://github.com/gunh0/security-compliance-docs-collector"><img src="./assets/featured/security-compliance-docs-collector.svg?v=f9838e0a" width="49%" alt="07 security-compliance-docs-collector"/></a>
-  <a href="https://github.com/gunh0/ocsf-auth-normalizer"><img src="./assets/featured/ocsf-auth-normalizer.svg?v=90344cf7" width="49%" alt="08 ocsf-auth-normalizer"/></a>
+  <a href="https://github.com/gunh0/ocsf-auth-normalizer"><img src="./assets/featured/ocsf-auth-normalizer.svg?v=044f974e" width="49%" alt="08 ocsf-auth-normalizer"/></a>
   <a href="https://github.com/gunh0/tor-network-analyzer"><img src="./assets/featured/tor-network-analyzer.svg?v=348861e1" width="49%" alt="09 tor-network-analyzer"/></a>
   <a href="https://github.com/gunh0/malware-image-classification"><img src="./assets/featured/malware-image-classification.svg?v=94b2f728" width="49%" alt="10 malware-image-classification"/></a>
-  <a href="https://github.com/gunh0/whitebox-cryptanalysis"><img src="./assets/featured/whitebox-cryptanalysis.svg?v=b6d3d21e" width="49%" alt="11 whitebox-cryptanalysis"/></a>
+  <a href="https://github.com/gunh0/whitebox-cryptanalysis"><img src="./assets/featured/whitebox-cryptanalysis.svg?v=dcc70181" width="49%" alt="11 whitebox-cryptanalysis"/></a>
 </p>
 </details>
 
@@ -104,18 +104,19 @@
 </details>
 
 <details>
-<summary><b>🧪 Learning & Playgrounds (9)</b></summary>
+<summary><b>🧪 Learning & Playgrounds (10)</b></summary>
 <br/>
 <p align="center">
   <a href="https://github.com/gunh0/tensorflow-playground"><img src="./assets/featured/tensorflow-playground.svg?v=6feebb8f" width="49%" alt="28 tensorflow-playground"/></a>
   <a href="https://github.com/gunh0/java-atoz"><img src="./assets/featured/java-atoz.svg?v=44d474df" width="49%" alt="29 java-atoz"/></a>
   <a href="https://github.com/gunh0/django-atoz"><img src="./assets/featured/django-atoz.svg?v=4a30754c" width="49%" alt="30 django-atoz"/></a>
-  <a href="https://github.com/gunh0/cpp-atoz"><img src="./assets/featured/cpp-atoz.svg?v=974ff439" width="49%" alt="31 cpp-atoz"/></a>
-  <a href="https://github.com/gunh0/keras-playground"><img src="./assets/featured/keras-playground.svg?v=427b29da" width="49%" alt="32 keras-playground"/></a>
-  <a href="https://github.com/gunh0/javascript-atoz"><img src="./assets/featured/javascript-atoz.svg?v=d2a5fa32" width="49%" alt="33 javascript-atoz"/></a>
-  <a href="https://github.com/gunh0/typescript-atoz"><img src="./assets/featured/typescript-atoz.svg?v=a7ce310f" width="49%" alt="34 typescript-atoz"/></a>
-  <a href="https://github.com/gunh0/code-generation"><img src="./assets/featured/code-generation.svg?v=c4cdc7ea" width="49%" alt="35 code-generation"/></a>
-  <a href="https://github.com/gunh0/centos7-openssh-testbed"><img src="./assets/featured/centos7-openssh-testbed.svg?v=59e2f294" width="49%" alt="36 centos7-openssh-testbed"/></a>
+  <a href="https://github.com/gunh0/to-be-a-gopher"><img src="./assets/featured/to-be-a-gopher.svg?v=52e719b6" width="49%" alt="31 to-be-a-gopher"/></a>
+  <a href="https://github.com/gunh0/cpp-atoz"><img src="./assets/featured/cpp-atoz.svg?v=9440ad7a" width="49%" alt="32 cpp-atoz"/></a>
+  <a href="https://github.com/gunh0/keras-playground"><img src="./assets/featured/keras-playground.svg?v=68284a24" width="49%" alt="33 keras-playground"/></a>
+  <a href="https://github.com/gunh0/javascript-atoz"><img src="./assets/featured/javascript-atoz.svg?v=eadb3cc1" width="49%" alt="34 javascript-atoz"/></a>
+  <a href="https://github.com/gunh0/typescript-atoz"><img src="./assets/featured/typescript-atoz.svg?v=bd7e2f6f" width="49%" alt="35 typescript-atoz"/></a>
+  <a href="https://github.com/gunh0/code-generation"><img src="./assets/featured/code-generation.svg?v=68b14ca7" width="49%" alt="36 code-generation"/></a>
+  <a href="https://github.com/gunh0/centos7-openssh-testbed"><img src="./assets/featured/centos7-openssh-testbed.svg?v=15924061" width="49%" alt="37 centos7-openssh-testbed"/></a>
 </p>
 </details>
 <!-- FEATURED:END -->

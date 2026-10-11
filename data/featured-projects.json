@@ -203,6 +203,10 @@
           "description": "Getting started with Django through example projects"
         },
         {
+          "name": "to-be-a-gopher",
+          "description": "Go from first programs to Secure Go: 43 security white papers with tests"
+        },
+        {
           "name": "cpp-atoz",
           "description": "Exploring the depths of C++ with practical examples"
         },
